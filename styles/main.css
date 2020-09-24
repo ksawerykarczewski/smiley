@@ -638,8 +638,12 @@ svg {
 }
 
 .modal__content {
-  position: relative;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
   padding: 2.5rem 0 0.5rem;
   width: 80vw;
   height: 65vh;
@@ -711,7 +715,7 @@ svg {
 
 .page__subject {
   padding: 3.22222rem 2.77778rem;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
