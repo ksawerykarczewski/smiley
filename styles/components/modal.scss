@@ -29,9 +29,9 @@
         
         background: $color-background;
         color: $color-black;
-        border: rem(5px) solid #000000;
+        border: rem(5px) solid $color-black;
         border-radius: rem(20px);
-        box-shadow: rem(5px) rem(5px) 0 0 #000000;
+        box-shadow: rem(5px) rem(5px) 0 0 $color-black;
       }
 }
 
@@ -43,59 +43,26 @@
         transform: translate(-50%, 50%);
         width: 80vw;
         height: rem(5px);
-        bottom: 7rem;
+        bottom: 5rem;
 
-        background: #000000;
+        background: $color-black;
     }
 }
 
 .modal__button {
     position: absolute;
-    // top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
-
     width: rem(190px);
     height: rem(65px);
-    border: rem(5px) solid #000000;
+
+    bottom: 5rem;
+    
+    border: rem(5px) solid $color-black;
     border-radius: rem(20px);
-    box-shadow: rem(5px) rem(5px) 0 0 #000000;
+    box-shadow: rem(5px) rem(5px) 0 0 $color-black;
     background: $color-blue;
     color: $color-white;
 
     text-transform: uppercase;
-    bottom: 7rem;
-}
-
-// .modal__content {
-//   position: relative;
-//   margin: auto;
-//   padding: 2.5rem 0 0.5rem;
-
-//   width: 80vw;
-//   height: 80vh;
-  
-//   background: $color-background;
-//   color: $color-black;
-//   border: rem(5px) solid #000000;
-//   border-radius: rem(20px);
-//   box-shadow: rem(5px) rem(5px) 0 0 #000000;
-// }
-
-/* The Close Button */
-.close {
-    color: blue($color: #000000);
-    position: absolute;
-    padding: 0rem 1.2rem;
-
-    font-size: 2rem;
-    top: 0rem;
-    font-weight: 100;
-}
-
-.close:hover,
-.close:focus {
-    color: blue($color: #000000);
-    text-decoration: none;
-    cursor: pointer;
 }

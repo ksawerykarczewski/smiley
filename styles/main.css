@@ -663,7 +663,7 @@ svg {
           transform: translate(-50%, 50%);
   width: 80vw;
   height: 0.27778rem;
-  bottom: 7rem;
+  bottom: 5rem;
   background: #000000;
 }
 
@@ -674,6 +674,7 @@ svg {
           transform: translate(-50%, 50%);
   width: 10.55556rem;
   height: 3.61111rem;
+  bottom: 5rem;
   border: 0.27778rem solid #000000;
   border-radius: 1.11111rem;
   -webkit-box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
@@ -681,24 +682,6 @@ svg {
   background: #3389AA;
   color: #FFFFFF;
   text-transform: uppercase;
-  bottom: 7rem;
-}
-
-/* The Close Button */
-.close {
-  color: 0;
-  position: absolute;
-  padding: 0rem 1.2rem;
-  font-size: 2rem;
-  top: 0rem;
-  font-weight: 100;
-}
-
-.close:hover,
-.close:focus {
-  color: 0;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* ---------------------------------------------------------------------------------------
