@@ -45,3 +45,11 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+/* SAFARI fallback */
+window.touchstart = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
