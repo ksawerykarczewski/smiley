@@ -543,46 +543,6 @@ svg {
   width: 100%;
 }
 
-.subject {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 0.55556rem;
-}
-
-@media (min-width: 766px) {
-  .subject__button {
-    width: 7.77778rem;
-    height: 7.77778rem;
-    padding: 0.77778rem;
-    border: 0.44444rem solid #000000;
-    border-radius: 1.11111rem;
-  }
-  .subject__button::before {
-    -webkit-transform: translate3d(1.11111rem, 0.83333rem, -1em);
-    transform: translate3d(1.11111rem, 0.83333rem, -1em);
-  }
-  .subject__button:hover {
-    -webkit-transform: translate3d(0.55556rem, 0.27778rem, -1em);
-    transform: translate3d(0.55556rem, 0.27778rem, -1em);
-  }
-  .subject {
-    grid-gap: 0.94444rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .subject {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 .answear-grid {
   display: -ms-grid;
   display: grid;
