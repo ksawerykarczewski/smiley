@@ -1,0 +1,44 @@
+@media (max-width: 481px) {
+  html:before {
+    position: absolute;
+    display: none;
+    content: 'adaptive:extra-narrow';
+  }
+  .not-extra-narrow {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 766px) {
+  html:before {
+    position: absolute;
+    display: none;
+    content: 'adaptive:narrow';
+  }
+  .not-narrow {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  html:before {
+    position: absolute;
+    display: none;
+    content: 'adaptive:regular';
+  }
+  .not-regular {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  html:before {
+    position: absolute;
+    display: none;
+    content: 'adaptive:wide';
+  }
+  .not-wide {
+    display: none;
+  }
+}
+/*# sourceMappingURL=adaptive.css.map */

@@ -1,0 +1,90 @@
+@function column($columns, $maxColumns) {
+    @return percentage($columns/$maxColumns);
+}
+
+@function gutter($columns, $maxColumns) {
+    $width: $columns * $grid-column-gutter-width;
+    $maxWidth: $maxColumns * $grid-column-width;
+    @return percentage($width/$maxWidth);
+}
+
+@mixin grid($columns, $maxColumns, $push: true, $pull: true) {
+    width: column($columns, $maxColumns);
+    
+    @if($push) {
+        [dir=ltr] & {
+            padding-left: gutter(1, $maxColumns);    
+        }
+        [dir=rtl] & {
+            padding-right: gutter(1, $maxColumns);    
+        }
+    }
+    @else {
+        [dir=ltr] & {
+            padding-left: 0;    
+        }
+        [dir=rtl] & {
+            padding-right: 0;    
+        }
+    }
+
+    @if($pull) {
+        [dir=ltr] & {
+            padding-right: gutter(1, $maxColumns);    
+        }
+        [dir=rtl] & {
+            padding-left: gutter(1, $maxColumns);    
+        }
+    }
+    @else {
+        [dir=ltr] & {
+            padding-right: 0;    
+        }
+        [dir=rtl] & {
+            padding-left: 0;    
+        }
+    }
+
+    // debug
+    @if($grid-debug) {
+        background-image: url('../assets/img/grid.png');
+        background-size: percentage(1/$columns) 1px;
+    }
+}
+
+@mixin grid-push-left($columns, $maxColumns) {
+    [dir=ltr] & {
+        margin-left: column($columns, $maxColumns);
+    }
+    [dir=rtl] & {
+        margin-right: column($columns, $maxColumns);
+    }
+}
+
+@mixin grid-push-right($columns, $maxColumns) {
+    [dir=ltr] & {
+        margin-right: column($columns, $maxColumns);
+    }
+    [dir=rtl] & {
+        margin-left: column($columns, $maxColumns);
+    }
+}
+
+@mixin grid-max($columns, $maxColumns) {
+    max-width: ($grid-full-width/$maxColumns * $columns) + 0px;
+}
+
+@mixin grid-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin grid-reset {
+    [dir=ltr] &, [dir=rtl] & {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    background-image: none;
+    background-size: auto;
+}

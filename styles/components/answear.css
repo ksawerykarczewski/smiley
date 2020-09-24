@@ -1,0 +1,17 @@
+.answear__label {
+  position: relative;
+  display: inline-block;
+  margin: 0 rem(3px);
+  width: rem(32px);
+  height: rem(46px);
+  font-size: 0;
+  cursor: pointer;
+  will-change: transform, opacity;
+  width: 200px;
+  height: 206px;
+  border: 10px solid black;
+  padding: 10px;
+  border-radius: 18px;
+  background: orange;
+}
+/*# sourceMappingURL=answear.css.map */

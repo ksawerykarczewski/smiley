@@ -1,0 +1,43 @@
+// @import url("//hello.myfonts.net/count/3707ef");
+// @font-face {font-family: 'TTNorms-Bold';src: url('/assets/fonts/tt-norms/3707EF_4_0.eot');src: url('/assets/fonts/tt-norms/3707EF_4_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/tt-norms/3707EF_4_0.woff2') format('woff2'),url('/assets/fonts/tt-norms/3707EF_4_0.woff') format('woff'),url('/assets/fonts/tt-norms/3707EF_4_0.ttf') format('truetype');}
+// @font-face {font-family: 'TTNorms-Light';src: url('/assets/fonts/tt-norms/3707EF_C_0.eot');src: url('/assets/fonts/tt-norms/3707EF_C_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/tt-norms/3707EF_C_0.woff2') format('woff2'),url('/assets/fonts/tt-norms/3707EF_C_0.woff') format('woff'),url('/assets/fonts/tt-norms/3707EF_C_0.ttf') format('truetype');}
+// @font-face {font-family: 'TTNorms-MediumItalic';src: url('/assets/fonts/tt-norms/3707EF_D_0.eot');src: url('/assets/fonts/tt-norms/3707EF_D_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/tt-norms/3707EF_D_0.woff2') format('woff2'),url('/assets/fonts/tt-norms/3707EF_D_0.woff') format('woff'),url('/assets/fonts/tt-norms/3707EF_D_0.ttf') format('truetype');}
+// @font-face {font-family: 'TTNorms-Medium';src: url('/assets/fonts/tt-norms/3707EF_E_0.eot');src: url('/assets/fonts/tt-norms/3707EF_E_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/tt-norms/3707EF_E_0.woff2') format('woff2'),url('/assets/fonts/tt-norms/3707EF_E_0.woff') format('woff'),url('/assets/fonts/tt-norms/3707EF_E_0.ttf') format('truetype');}
+// @font-face {font-family: 'TTNorms-Regular';src: url('/assets/fonts/tt-norms/3707EF_F_0.eot');src: url('/assets/fonts/tt-norms/3707EF_F_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/tt-norms/3707EF_F_0.woff2') format('woff2'),url('/assets/fonts/tt-norms/3707EF_F_0.woff') format('woff'),url('/assets/fonts/tt-norms/3707EF_F_0.ttf') format('truetype');}
+
+// @mixin cooper-black {
+//     font-family: cooper-black-std, serif;
+//     font-weight: 400;
+// }
+
+// @mixin tt-norms-bold {
+//     font-family: 'TTNorms-Bold', serif;
+// }
+
+// @mixin tt-norms-light {
+//     font-family: 'TTNorms-Light', serif;
+// }
+
+// @mixin tt-norms-italic {
+//     font-family: 'TTNorms-MediumItalic', serif;
+// }
+
+// @mixin tt-norms-medium {
+//     font-family: 'TTNorms-Medium', serif;
+// }
+
+// @mixin tt-norms-regular {
+//     font-family: 'TTNorms-Regular', serif;
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@mixin rakkas-regular {
+    font-family: 'Rakkas', cursive;
+}
+
+@mixin montserrat-regular {
+    font-family: 'Montserrat', sans-serif;
+}
+
