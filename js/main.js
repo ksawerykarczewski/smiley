@@ -47,7 +47,7 @@ window.onclick = function (event) {
 }
 
 /* SAFARI fallback */
-window.touchstart = function (event) {
+window.ontouchstart = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
