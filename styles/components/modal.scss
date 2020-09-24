@@ -66,3 +66,18 @@
 
     text-transform: uppercase;
 }
+
+@include mq-regular {
+    .modal {
+        &__content {
+            width: 50vw;
+            height: 45vh;
+          }
+    }
+    
+    .modal__heading {
+        &::after {
+            width: 50vw;
+        }
+    }
+}
