@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Politics</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="shortcut icon" href="../favicon.png" />
+</head>
+
+<body class="page">
+    <h1 class="page__heading">Which political news outlet would you choose?</h1>
+    <!-- The FORM -->
+    <section class="page__subject">
+        <form method="POST" id="formAnswear" onsubmit="greetUser(); return false">
+            <div class="answear-grid">
+                <label for="answear" class="answear answear--1" id="1">
+                    <p>Democratic</p>
+                    <input type="button" onclick="greetUser(); return false" name="answear" value="Democratic"
+                        placeholder="radical" />
+                </label>
+                <label for="answear" class="answear answear--2" id="2">
+                    <p>Radical</p>
+                    <input type="button" onclick="greetUser(); return false" name="answear" value="Radical" />
+                </label>
+                <label for="answear" class="answear answear--3" id="3">
+                    <p>Authoritarian</p>
+                    <input type="button" onclick="greetUser(); return false" name="answear" value="Authoritarian" />
+                </label>
+                <label for="answear" class="answear answear--4" id="4">
+                    <p>Conservative</p>
+                    <input type="button" onclick="greetUser(); return false" name="answear" value="Conservative" />
+                </label>
+            </div>
+        </form>
+    </section>
+    <!-- The Modal -->
+    <div class="modal modal-js">
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

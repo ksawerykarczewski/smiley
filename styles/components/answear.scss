@@ -22,7 +22,7 @@ svg {
 
     box-shadow: rem(5px) rem(5px) 0 0 #000000;
 
-    font-size: 0;
+    // font-size: 0;
     cursor: pointer;
     will-change: transform, opacity;
 
@@ -42,20 +42,45 @@ svg {
         cursor: pointer;
     }
 
+    &__long {
+        width: rem(324px);
+
+        border: rem(10px) solid #000000;
+        border-radius: 100px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(124px);
+            height: rem(124px);
+
+            // right: -4px;
+
+            // background: $color-orange;
+            // border: rem(5px) solid #000000;
+            // border-radius: 50%;
+
+            display: block;
+            content: ' ';
+            background-image: url('../assets/images/eye.svg');
+            background-size: rem(124px) rem(124px);
+        }
+    }
+
     &--1{
-        background: $color-orange;
+        background: $color-green;
     }
 
     &--2{
-        background: $color-red;
-    }
-
-    &--3{
         background: $color-blue;
     }
 
+    &--3{
+        background: $color-red;
+    }
+
     &--4{
-        background: $color-pink;
+        background: $color-yellow;
     }
 
     &:hover{
@@ -65,4 +90,5 @@ svg {
     box-shadow: rem(0px) rem(0px) 0 0 #000000;
     }
 }
+
 

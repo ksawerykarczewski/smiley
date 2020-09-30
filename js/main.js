@@ -7,21 +7,23 @@ var modal = document.querySelector(".modal-js");
 async function greetUser() {
     //let button = event.target;
     let id = event.target.parentNode.id;
-    let message;
+    //let message;
+    //console.log(event.target.value);
+    let message = event.target.value;
 
-    if (id == "1") {
+    if (message == "mood1") {
         message = 'Thats great';
         console.log(message);
     }
-    if (id == "2") {
+    if (message == "mood2") {
         message = 'Could be worse';
         console.log(message);
     }
-    if (id == "3") {
+    if (message == "mood3") {
         message = 'Ugh';
         console.log(message);
     }
-    if (id == "4") {
+    if (message == "mood4") {
         message = 'No words to describe it';
         console.log(message);
     }

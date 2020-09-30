@@ -1,0 +1,53 @@
+.eye {
+    position: absolute;
+    width: rem(20px);
+    height: rem(20px);
+
+    top: 50%;
+    left: 50%;
+
+    background: whitesmoke;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.eye-outer {
+  fill: none;
+  // stroke: #000;
+  // stroke-width: rem(35px);
+  position: fixed;
+}
+  
+.eye-inner {
+  fill: #000;
+}
+
+.eye__eyelid {
+  position: absolute;
+    /* left: 50%; */
+    /* -webkit-transform: translate(-50%, 50%); */
+    /* transform: translate(-50%, 50%); */
+    height: inherit;
+    /* position: absolute; */
+    /* left: 50%; */
+    /* -webkit-transform: translate(-50%, 50%); */
+    transform: translate(0%, -25%);
+    /* width: inherit; */
+    /* top: -25%;*/
+}
+
+#svg-eye {
+  position: absolute;
+  /* left: 50%; */
+  /* -webkit-transform: translate(-50%, 50%); */
+  /* transform: translate(-50%, 50%); */
+  height: inherit;
+  top: 0;
+}
+
+.eye__container {
+      width: 5rem;
+      height: 5rem;
+      position: relative;
+}

@@ -568,7 +568,6 @@ svg {
   border-radius: 1.11111rem;
   -webkit-box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
           box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
-  font-size: 0;
   cursor: pointer;
   will-change: transform, opacity;
   -webkit-transform-style: preserve-3d;
@@ -589,20 +588,37 @@ svg {
   cursor: pointer;
 }
 
+.answear__long {
+  width: 18rem;
+  border: 0.55556rem solid #000000;
+  border-radius: 100px;
+}
+
+.answear__long::before {
+  content: '';
+  position: absolute;
+  width: 6.88889rem;
+  height: 6.88889rem;
+  display: block;
+  content: ' ';
+  background-image: url("../assets/images/eye.svg");
+  background-size: 6.88889rem 6.88889rem;
+}
+
 .answear--1 {
-  background: #FF8661;
+  background: #307000;
 }
 
 .answear--2 {
-  background: #F44747;
-}
-
-.answear--3 {
   background: #3389AA;
 }
 
+.answear--3 {
+  background: #F44747;
+}
+
 .answear--4 {
-  background: #F4C6C9;
+  background: #F9DB02;
 }
 
 .answear:hover {
@@ -665,6 +681,10 @@ svg {
   height: 0.27778rem;
   bottom: 5rem;
   background: #000000;
+}
+
+.modal__heading--2 {
+  color: #00000080;
 }
 
 .modal__button {
@@ -750,6 +770,57 @@ svg {
   }
 }
 
+.eye {
+  position: absolute;
+  width: 1.11111rem;
+  height: 1.11111rem;
+  top: 50%;
+  left: 50%;
+  background: whitesmoke;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.eye-outer {
+  fill: none;
+  position: fixed;
+}
+
+.eye-inner {
+  fill: #000;
+}
+
+.eye__eyelid {
+  position: absolute;
+  /* left: 50%; */
+  /* -webkit-transform: translate(-50%, 50%); */
+  /* transform: translate(-50%, 50%); */
+  height: inherit;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* -webkit-transform: translate(-50%, 50%); */
+  -webkit-transform: translate(0%, -25%);
+          transform: translate(0%, -25%);
+  /* width: inherit; */
+  /* top: -25%;*/
+}
+
+#svg-eye {
+  position: absolute;
+  /* left: 50%; */
+  /* -webkit-transform: translate(-50%, 50%); */
+  /* transform: translate(-50%, 50%); */
+  height: inherit;
+  top: 0;
+}
+
+.eye__container {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+}
+
 /* ---------------------------------------------------------------------------------------
  *  Pages
  */
@@ -764,6 +835,14 @@ svg {
 
 .page__subject {
   padding: 3.22222rem 2.77778rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.page__subject-eye {
   position: absolute;
   top: 50%;
   left: 50%;
