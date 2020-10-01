@@ -827,7 +827,7 @@ svg {
 
 .page__subject-eye {
   position: absolute;
-  bottom: 1.11111rem;
+  bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
