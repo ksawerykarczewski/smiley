@@ -2,7 +2,7 @@
     background-color: $color-background;
 
     &__heading {
-        padding: rem(38px) 0 0;
+        padding: rem(38px) rem(15px) 0;
         text-align: center;
     }
 
@@ -11,13 +11,15 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
 
     &__subject-eye {
         position: absolute;
-        top: 50%;
+        bottom: rem(20px);
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
 }
@@ -30,6 +32,11 @@
 
         &__subject {
             padding: rem(28px) rem(50px);
+        }
+
+        &__subject-eye {
+            bottom: auto;
+            top: 50%;
         }
     }
 

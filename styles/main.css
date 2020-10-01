@@ -628,6 +628,12 @@ svg {
           box-shadow: 0rem 0rem 0 0 #000000;
 }
 
+@media (min-width: 766px) {
+  .answear-grid__eye-display {
+    grid-gap: 8.33333rem 16.66667rem;
+  }
+}
+
 /* Modal Content */
 .modal {
   display: none;
@@ -770,16 +776,10 @@ svg {
   }
 }
 
-.eye {
-  position: absolute;
-  width: 1.11111rem;
-  height: 1.11111rem;
-  top: 50%;
-  left: 50%;
-  background: whitesmoke;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+.eye__container {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
 }
 
 .eye-outer {
@@ -793,32 +793,15 @@ svg {
 
 .eye__eyelid {
   position: absolute;
-  /* left: 50%; */
-  /* -webkit-transform: translate(-50%, 50%); */
-  /* transform: translate(-50%, 50%); */
   height: inherit;
-  /* position: absolute; */
-  /* left: 50%; */
-  /* -webkit-transform: translate(-50%, 50%); */
   -webkit-transform: translate(0%, -25%);
-          transform: translate(0%, -25%);
-  /* width: inherit; */
-  /* top: -25%;*/
+  transform: translate(0%, -25%);
 }
 
 #svg-eye {
   position: absolute;
-  /* left: 50%; */
-  /* -webkit-transform: translate(-50%, 50%); */
-  /* transform: translate(-50%, 50%); */
   height: inherit;
   top: 0;
-}
-
-.eye__container {
-  width: 5rem;
-  height: 5rem;
-  position: relative;
 }
 
 /* ---------------------------------------------------------------------------------------
@@ -829,7 +812,7 @@ svg {
 }
 
 .page__heading {
-  padding: 2.11111rem 0 0;
+  padding: 2.11111rem 0.83333rem 0;
   text-align: center;
 }
 
@@ -839,15 +822,15 @@ svg {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .page__subject-eye {
   position: absolute;
-  top: 50%;
+  bottom: 1.11111rem;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 766px) {
@@ -856,6 +839,10 @@ svg {
   }
   .page__subject {
     padding: 1.55556rem 2.77778rem;
+  }
+  .page__subject-eye {
+    bottom: auto;
+    top: 50%;
   }
 }
 

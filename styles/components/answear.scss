@@ -91,4 +91,10 @@ svg {
     }
 }
 
-
+@include mq-regular {
+    .answear-grid {
+        &__eye-display {
+            grid-gap: rem(150px) rem(300px);
+        }
+    }
+}
