@@ -5,9 +5,19 @@ var requestId = null;
 
 var buttonAnswear = document.querySelectorAll(".answear");
 var eyeStreams = document.querySelector(".eye__streams");
+var eyeLid = document.querySelector(".eye__eyelid");
+
+window.onload = function () {
+    var tl = gsap.timeline();
+    tl.to(eyeLid, { autoAlpha: 1, duration: 0, scale: 0, transformOrigin: "50% 40%" });
+    tl.to(svg, { autoAlpha: 0, duration: 0, scale: 0 });
+    tl.to(svg, { autoAlpha: 1, duration: 1, scale: 1, ease: "back.out(1)" }, 0);
+    tl.to(eyeLid, { autoAlpha: 1, duration: .6, scale: 1 }, 0);
+
+};
 
 var speed = 6;
-var speedHover = 2;
+var speedOnHover = 2;
 
 var tl = gsap.timeline();
 tl.to(eyeStreams, { autoAlpha: 0, duration: 0, scale: 0 });
@@ -30,12 +40,12 @@ var animation = function (el, speed) {
 // start animation
 animation(eyeStreams, speed);
 
-buttonAnswear.forEach(element => {
-    element.onmouseover = function (event) {
-        animation(eyeStreams, speedHover);
+buttonAnswear.forEach(button => {
+    button.onmouseover = function () {
+        animation(eyeStreams, speedOnHover);
     };
 
-    element.onmouseleave = function (event) {
+    button.onmouseleave = function () {
         animation(eyeStreams, speed);
     };
 });
