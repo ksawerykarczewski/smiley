@@ -66,4 +66,3 @@ window.ontouchstart = function (event) {
         modal.style.display = "none";
     }
 }
-

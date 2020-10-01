@@ -35,6 +35,11 @@
   transform: translate(0%, -25%);
 }
 
+.eye__streams {
+  position: absolute;
+  transform: scale(2);
+}
+
 #svg-eye {
   position: absolute;
   height: inherit;
