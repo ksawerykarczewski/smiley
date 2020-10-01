@@ -28,13 +28,22 @@ async function greetUser() {
         console.log(message);
     }
 
+    // let responseToUser = `
+    //     <div class="modal__content">
+    //       <h1 class="modal__heading" id="modal__heading">${message}</h1>
+    //       <h2 class="modal__heading--2" id="modal__heading--2">Click button to see more</h2>
+    //       <button class="modal__button">Explore</button>
+    //     </div>
+    //     `;
+
     let responseToUser = `
-        <div class="modal__content">
-          <h1 class="modal__heading" id="modal__heading">${message}</h1>
-          <h2 class="modal__heading--2" id="modal__heading--2">Click button to see more</h2>
-          <button class="modal__button">Explore</button>
+        <div class="modal__content--2">
+          <h2 class="modal__description">Your answear</h2>
+          <h1>${message}</h1>
+          <button class="button modal__button--2" onclick="closeModal();">Change</button>
+          <button class="button modal__button--2">Next</button>
         </div>
-        `
+        `;
 
     setTimeout(function () {
         modal.style.display = "block";
@@ -42,12 +51,15 @@ async function greetUser() {
     }, 250);
 }
 
+function closeModal() {
+    modal.style.display = "none";
+}
+
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-
 /* SAFARI fallback */
 window.ontouchstart = function (event) {
     if (event.target == modal) {

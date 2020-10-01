@@ -4,6 +4,17 @@
   position: relative;
 }
 
+.eye__container::after {
+  content: 'all seeing eye';
+  position: absolute;
+  bottom: -1.5rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  opacity: 0.5;
+}
+
 .eye-outer {
   fill: none;
   position: fixed;

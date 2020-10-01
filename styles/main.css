@@ -677,6 +677,24 @@ svg {
           box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
 }
 
+.modal__content--2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 1.5rem 0 1rem;
+  width: 16.66667rem;
+  height: 12.22222rem;
+  background: #F4F2EE;
+  color: #000000;
+  border: 0.27778rem solid #000000;
+  border-radius: 1.11111rem;
+  -webkit-box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
+          box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
+}
+
 .modal__heading::after {
   content: '';
   position: absolute;
@@ -708,6 +726,28 @@ svg {
   background: #3389AA;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+.modal__button--2 {
+  background: #F4F2EE;
+  margin: 0.83333rem;
+  padding: 0.83333rem 0;
+  width: 5.55556rem;
+  border-radius: 1.11111rem;
+  border: 0.16667rem solid #000000;
+  -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.modal__button--2:hover {
+  -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  -webkit-box-shadow: 0.27778rem 0.27778rem 0 0 #00000080;
+          box-shadow: 0.27778rem 0.27778rem 0 0 #00000080;
 }
 
 @media (min-width: 766px) {
@@ -780,6 +820,17 @@ svg {
   width: 5rem;
   height: 5rem;
   position: relative;
+}
+
+.eye__container::after {
+  content: 'all seeing eye';
+  position: absolute;
+  bottom: -1.5rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  opacity: 0.5;
 }
 
 .eye-outer {
