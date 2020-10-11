@@ -41,9 +41,9 @@
             transform: translate(-50%, -50%);
             margin: 0 auto;
             padding: 1.5rem 0 1rem;
-        
-            width: rem(300px);
-            height: rem(220px);
+    
+            min-width: rem(300px);
+            height: auto;
             
             background: $color-background;
             color: $color-black;
@@ -52,25 +52,38 @@
             box-shadow: rem(5px) rem(5px) 0 0 $color-black;
         }
     }
+}
 
+.modal__description {
+    font-size: rem(18px);
+    color: $color-gray;
 }
 
 .modal__heading {
-    &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        width: 80vw;
-        height: rem(5px);
-        bottom: 5rem;
+    padding: 0 rem(10px);
+}
 
-        background: $color-black;
-    }
+// .modal__heading {
+//     &::after {
+//         content: '';
+//         position: absolute;
+//         left: 50%;
+//         transform: translate(-50%, 50%);
+//         width: 80vw;
+//         height: rem(5px);
+//         bottom: 5rem;
+
+//         background: $color-black;
+//     }
     
-    &--2 {
-        color: $color-gray;
-    }
+//     &--2 {
+//         color: $color-gray;
+//     }
+// }
+
+.modal__buttons-container {
+    position: absolute;
+    bottom: rem(20px);
 }
 
 .modal__button {
@@ -118,6 +131,14 @@
     .modal__heading {
         &::after {
             width: 50vw;
+        }
+    }
+
+    .modal {
+        &__content {
+            &--2 {
+                min-width: rem(500px);
+            }
         }
     }
 }

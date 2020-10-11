@@ -5,43 +5,29 @@
 var modal = document.querySelector(".modal-js");
 
 async function greetUser() {
-    //let button = event.target;
-    let id = event.target.parentNode.id;
-    //let message;
-    //console.log(event.target.value);
+
     let message = event.target.value;
+    let link = document.querySelector('body').dataset.nextPage;
 
     if (message == "mood1") {
-        message = 'Thats great';
-        console.log(message);
+        message = 'Thats great!';
     }
     if (message == "mood2") {
-        message = 'Could be worse';
-        console.log(message);
+        message = 'Everything is passable?';
     }
     if (message == "mood3") {
-        message = 'Ugh';
-        console.log(message);
+        message = 'We are sorry to hear that';
     }
     if (message == "mood4") {
-        message = 'No words to describe it';
-        console.log(message);
+        message = 'No words to describe it?';
     }
-
-    // let responseToUser = `
-    //     <div class="modal__content">
-    //       <h1 class="modal__heading" id="modal__heading">${message}</h1>
-    //       <h2 class="modal__heading--2" id="modal__heading--2">Click button to see more</h2>
-    //       <button class="modal__button">Explore</button>
-    //     </div>
-    //     `;
 
     let responseToUser = `
         <div class="modal__content--2">
-          <h2 class="modal__description">Your answear</h2>
-          <h1>${message}</h1>
-          <button class="button modal__button--2" onclick="closeModal();">Change</button>
-          <button class="button modal__button--2">Next</button>
+          <h1 class="modal__heading">${message}</h1>
+          <h2 class="modal__description">Please continue to see more</h2>
+            <button class="button modal__button--2" onclick="closeModal();">Change</button>
+            <button class="button modal__button--2" onclick="location.href='${link}.html'">Next</button>
         </div>
         `;
 
