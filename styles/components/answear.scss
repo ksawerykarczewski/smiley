@@ -2,6 +2,10 @@ svg {
     width: 100%;
 }
 
+// .mood {
+//     transform: rotate(-180deg);
+// }
+
 .answear-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -40,6 +44,11 @@ svg {
 
         opacity: 0;
         cursor: pointer;
+    }
+
+    &--narrow {
+        height: rem(84px);
+        margin: 0 auto;
     }
 
     &__long {

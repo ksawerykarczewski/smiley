@@ -7,14 +7,19 @@ var buttonAnswear = document.querySelectorAll(".answear");
 var eyeStreams = document.querySelector(".eye__streams");
 var eyeLid = document.querySelector(".eye__eyelid");
 
-window.onload = function () {
+function displayEye() {
     var tl = gsap.timeline();
+
+    // tl.set(document.querySelector("body"), { autoAlpha: 0 });
+    // tl.to(document.querySelector("body"), { autoAlpha: 1, duration: 3.5, ease: "back.out(1)" });
+
     tl.to(eyeLid, { autoAlpha: 1, duration: 0, scale: 0, transformOrigin: "50% 40%" });
     tl.to(svg, { autoAlpha: 0, duration: 0, scale: 0 });
     tl.to(svg, { autoAlpha: 1, duration: 1, scale: 1, ease: "back.out(1)" }, 0);
     tl.to(eyeLid, { autoAlpha: 1, duration: .6, scale: 1 }, 0);
+}
 
-};
+displayEye();
 
 var speed = 6;
 var speedOnHover = 2;

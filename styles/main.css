@@ -588,6 +588,11 @@ svg {
   cursor: pointer;
 }
 
+.answear--narrow {
+  height: 4.66667rem;
+  margin: 0 auto;
+}
+
 .answear__long {
   width: 18rem;
   border: 0.55556rem solid #000000;
@@ -704,11 +709,6 @@ svg {
   padding: 0 0.55556rem;
 }
 
-.modal__buttons-container {
-  position: absolute;
-  bottom: 1.11111rem;
-}
-
 .modal__button {
   position: absolute;
   left: 50%;
@@ -728,7 +728,7 @@ svg {
 
 .modal__button--2 {
   background: #F4F2EE;
-  margin: 0.83333rem;
+  margin: 2.83333rem 0.83333rem 0;
   padding: 0.83333rem 0;
   width: 5.55556rem;
   border-radius: 1.11111rem;
@@ -863,8 +863,8 @@ svg {
 }
 
 .wheel {
-  width: 13.88889rem;
-  height: 13.88889rem;
+  width: 19.44444rem;
+  height: auto;
 }
 
 /* ---------------------------------------------------------------------------------------

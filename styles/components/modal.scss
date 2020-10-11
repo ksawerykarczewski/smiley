@@ -81,11 +81,6 @@
 //     }
 // }
 
-.modal__buttons-container {
-    position: absolute;
-    bottom: rem(20px);
-}
-
 .modal__button {
     position: absolute;
     left: 50%;
@@ -105,7 +100,7 @@
 
     &--2 {
         background: $color-background;
-        margin: rem(15px);
+        margin: 2.83333rem rem(15px) 0;
         padding: rem(15px) 0;
         width: rem(100px);
         border-radius: rem(20px);
