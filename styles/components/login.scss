@@ -1,0 +1,78 @@
+.login{
+    &--form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        display: grid;
+        grid-gap: rem(10px) 0;
+
+        text-align: left;
+    }
+
+    &__input {
+        width: rem(250px);
+        height: rem(70px);
+        padding: 0 rem(20px);
+
+        color: $color-black;
+        background: $color-background;
+        outline: none;
+        border: rem(5px) solid $color-black;
+        border-radius: rem(20px);
+
+
+        // &::placeholder {
+        //     transform: translate(rem(10px), 0);
+        // }
+        // &::-webkit-input-placeholder { 
+        //     transform: translate(rem(10px), 0);
+        //   }
+        // &::-moz-placeholder { 
+        //     transform: translate(rem(10px), 0);
+        //   }
+        // &:-ms-input-placeholder { 
+        //     transform: translate(rem(10px), 0);
+        //   }
+        // &:-moz-placeholder { 
+        //     transform: translate(rem(10px), 0);
+        //   }
+
+    }
+
+    &__submit {
+        width: rem(120px);
+        height: rem(70px);
+
+        color: $color-background;
+        background: $color-black;
+        outline: none;
+        border: none;
+
+        border-radius: rem(20px);
+        box-shadow: rem(5px) rem(5px) 0 0 $color-gray;
+
+        cursor: pointer;
+        will-change: transform, opacity;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        @include click-transitions;
+
+        &:hover{
+            -webkit-transform: translate3d(rem(5px), rem(5px), -1em);
+                    transform: translate3d(rem(5px), rem(5px), -1em);
+        
+            box-shadow: rem(0px) rem(0px) 0 0 #000000;
+        }
+    }
+}
+
+
+input[type="text"],
+textarea,
+select {
+    background: $color-background;
+}

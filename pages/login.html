@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mindmorphology</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="shortcut icon" href="../favicon.png" />
+</head>
+
+<body class="page page-login">
+    <h1 class="page__heading">What is your name?</h1>
+    <form class="login--form" onsubmit="validate(); return false;">
+        <!-- <label for="name">Name</label> -->
+        <input class="login__input" type="text" id="name" name="name" placeholder="Name" required minlength="2"
+            maxlength="15">
+        <button class="login__submit">Submit</button>
+    </form>
+    <footer class="footer__login">
+        <p>Pssst!</p>
+        <p class="gray">It doesn't need to be real</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" crossorigin="anonymous"></script>
+    <script src="../js/validator.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

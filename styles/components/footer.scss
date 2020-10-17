@@ -1,0 +1,14 @@
+.footer {
+    &__login {
+        position: absolute;
+        bottom: rem(10px);
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+    }  
+}
+.gray {
+    color: $color-gray;
+}

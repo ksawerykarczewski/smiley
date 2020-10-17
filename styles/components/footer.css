@@ -1,0 +1,9 @@
+.footer__login {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*# sourceMappingURL=footer.css.map */

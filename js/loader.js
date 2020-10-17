@@ -1,3 +1,3 @@
 setTimeout(() => {
-    window.location.href = 'pages/mood.html';
+    window.location.href = 'pages/login.html';
 }, 4000);

@@ -504,6 +504,75 @@ h1, h2, h3, h4, h5, h6, p {
 /* ---------------------------------------------------------------------------------------
  *  Components
  */
+.footer__login {
+  position: absolute;
+  bottom: 0.55556rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gray {
+  color: #00000080;
+}
+
+.login--form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.55556rem 0;
+  text-align: left;
+}
+
+.login__input {
+  width: 13.88889rem;
+  height: 3.88889rem;
+  padding: 0 1.11111rem;
+  color: #000000;
+  background: #F4F2EE;
+  outline: none;
+  border: 0.27778rem solid #000000;
+  border-radius: 1.11111rem;
+}
+
+.login__submit {
+  width: 6.66667rem;
+  height: 3.88889rem;
+  color: #F4F2EE;
+  background: #000000;
+  outline: none;
+  border: none;
+  border-radius: 1.11111rem;
+  -webkit-box-shadow: 0.27778rem 0.27778rem 0 0 #00000080;
+          box-shadow: 0.27778rem 0.27778rem 0 0 #00000080;
+  cursor: pointer;
+  will-change: transform, opacity;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.login__submit:hover {
+  -webkit-transform: translate3d(0.27778rem, 0.27778rem, -1em);
+  transform: translate3d(0.27778rem, 0.27778rem, -1em);
+  -webkit-box-shadow: 0rem 0rem 0 0 #000000;
+          box-shadow: 0rem 0rem 0 0 #000000;
+}
+
+input[type="text"],
+textarea,
+select {
+  background: #F4F2EE;
+}
+
 .button {
   overflow: visible;
   margin: 0;
@@ -712,8 +781,8 @@ svg {
 .modal__button {
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, -50%);
   width: 10.55556rem;
   height: 3.61111rem;
   bottom: 5rem;
