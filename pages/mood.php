@@ -1,3 +1,10 @@
+<?php
+session_start();
+if( ! isset($_SESSION['name']) ){
+  header('Location: login.html');
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +18,11 @@
 </head>
 
 <body class="page" data-next-page="outlets">
-  <h1 class="page__heading">How are you feeling today?</h1>
+  <h1 class="page__heading">
+    How are you feeling today, 
+  <?php
+        echo $_SESSION['name'];
+  ?>?</h1>
   <!-- The FORM -->
   <section class="page__subject">
     <form method="POST" id="formAnswear" onsubmit="greetUser(); return false">
