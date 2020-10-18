@@ -32,7 +32,7 @@ require_once(__DIR__.'/arangodb.php');
 use ArangoDBClient\Statement as ArangoStatement;
 
 try {
-    $userId = rand(100, 999);
+    $userId = uniqid();
     $sName = $_POST['name'];
     // $sLastName = $_POST['lastname'];
     // $sPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);

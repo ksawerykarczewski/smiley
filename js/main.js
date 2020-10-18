@@ -3,6 +3,7 @@
 
 // Get the modal
 var modal = document.querySelector(".modal-js");
+var answears = document.querySelectorAll(".answear");
 var moods = document.querySelectorAll(".mood");
 
 
@@ -46,13 +47,13 @@ function closeModal() {
 window.onload = function () {
     // Timeline
     var tl = gsap.timeline({ repeat: 0 });
+    gsap.set(document.querySelector(".page__heading"), { autoAlpha: 0, x: 50 });
     // tl.set(moods, {
     //     rotation: "-180", transformOrigin: "50% 50%"
     // });
     tl.to(moods, {
-        rotation: "-360", transformOrigin: "50% 50%", ease: Linear.easeNone, duration: .2
+        rotation: "-360", transformOrigin: "50% 50%", ease: Linear.easeNone, duration: .5, delay: .5
     });
-    gsap.set(document.querySelector(".page__heading"), { autoAlpha: 0, x: 50 });
     gsap.to(document.querySelector(".page__heading"), { x: 0, autoAlpha: 1, duration: .5, ease: "back.out(1)" }, "<");
 
     // moods.forEach(mood => {

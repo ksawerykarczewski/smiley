@@ -11,13 +11,17 @@
 </head>
 
 <body class="page page-login">
-    <h1 class="page__heading">What is your name?</h1>
-    <form class="login--form" onsubmit="validate(); return false;">
-        <!-- <label for="name">Name</label> -->
-        <input class="login__input" type="text" id="name" name="name" placeholder="Name" required minlength="2"
-            maxlength="15">
-        <button class="login__submit">Submit</button>
-    </form>
+    <header>
+        <h1 class="page__heading">What is your name?</h1>
+    </header>
+    <main>
+        <form class="login--form" onsubmit="validate(); return false;">
+            <label aria-hidden="true" hidden for="name">Name</label>
+            <input class="login__input" type="text" id="name" name="name" placeholder="Name" value="name" required
+                minlength="2" maxlength="15">
+            <button class="login__submit">Submit</button>
+        </form>
+    </main>
     <footer class="footer__login">
         <p>Pssst!</p>
         <p class="gray">It doesn't need to be real</p>
