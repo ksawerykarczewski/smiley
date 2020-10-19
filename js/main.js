@@ -6,13 +6,14 @@ var modal = document.querySelector(".modal-js");
 var answears = document.querySelectorAll(".answear");
 var moods = document.querySelectorAll(".mood");
 
-var answears = document.querySelectorAll(".answear");
+// var answears = document.querySelectorAll(".answear-js");
 
+
+let link = document.querySelector('body').dataset.nextPage;
 
 async function greetUser() {
 
     let message = event.target.value;
-    let link = document.querySelector('body').dataset.nextPage;
 
     if (message == "mood1") {
         message = 'Thats great!';
@@ -49,23 +50,21 @@ function closeModal() {
 window.onload = function () {
     // Timeline
     var tl = gsap.timeline({ repeat: 0 });
-    gsap.set(document.querySelector(".page__heading"), { autoAlpha: 0, x: 50 });
-    // tl.set(answears, {
-    //     autoAlpha: 0, y: 50
-    // });
-    tl.to(moods, {
-        rotation: "-360", transformOrigin: "50% 50%", ease: Linear.easeNone, duration: .5, delay: .5
-    });
-    // tl.to(answears, {
-    //     y: 0, autoAlpha: 1, duration: .5, ease: "back.out(1)"
-    // }, "<");
-    gsap.to(document.querySelector(".page__heading"), { x: 0, autoAlpha: 1, duration: .5, ease: "back.out(1)" }, "<");
-    // moods.forEach(mood => {
-    //     console.log(mood);
-    //     tl.to(mood, {
-    //         rotation: "-360", transformOrigin: "50% 50%", ease: Linear.easeNone, duration: .2
-    //     });
-    // });
+    tl.set(document.querySelector(".page__heading"), { autoAlpha: 0, x: 50 }, 0);
+    tl.to(document.querySelector(".page__heading"), { x: 0, autoAlpha: 1, duration: .5, ease: "back.out(1)" }, 0);
+
+    // if (link == 'outlets') {
+    //     // tl.set(answears, { transformOrigin: "50% 50%", scale: 0 });
+    //     // tl.to(answears, { scale: 1, duration: 1.5, ease: "back.out(1)" });
+
+    //     tl.to(moods, {
+    //         rotation: "-360", transformOrigin: "50% 50%", ease: Linear.easeNone, duration: .5
+    //     }, 0);
+    // }
+    // if (link == 'wheel') {
+    //     tl.set(answears, { scale: 0 });
+    //     tl.to(answears, { scale: 1, duration: .5 });
+    // }
 }
 
 window.onclick = function (event) {

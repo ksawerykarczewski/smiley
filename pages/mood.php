@@ -1,9 +1,9 @@
 <?php
-session_start();
-if( ! isset($_SESSION['name']) ){
-  header('Location: login.html');
-  exit;
-}
+// session_start();
+// if( ! isset($_SESSION['name']) ){
+//   header('Location: login.html');
+//   exit;
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +29,7 @@ if( ! isset($_SESSION['name']) ){
     <section class="page__subject">
       <form method="POST" id="formAnswear" onsubmit="greetUser(); return false">
         <div class="answear-grid">
+          <div class="answear-js">
           <label for="answear" class="answear answear--1" id="1">
             <svg class="mood" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 152">
               <g id="Group_70" data-name="Group 70" transform="translate(-6966 -1381)">
@@ -73,6 +74,8 @@ if( ! isset($_SESSION['name']) ){
             </svg>
             <input type="button" onclick="greetUser(); return false" name="answear" value="mood1" />
           </label>
+          </div>
+          <div class="answear-js">
           <label for="answear" class="answear answear--2" id="2">
             <svg class="mood" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 85">
               <g id="Group_71" data-name="Group 71" transform="translate(0.338 -0.34)">
@@ -118,6 +121,8 @@ if( ! isset($_SESSION['name']) ){
             </svg>
             <input type="button" onclick="greetUser(); return false" name="answear" value="mood2" />
           </label>
+          </div>
+          <div class="answear-js">
           <label for="answear" class="answear answear--3" id="3">
             <svg class="mood" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 86">
               <g id="Group_74" data-name="Group 74" transform="translate(-5865 -3158)">
@@ -164,6 +169,8 @@ if( ! isset($_SESSION['name']) ){
             </svg>
             <input type="button" onclick="greetUser(); return false" name="answear" value="mood3" />
           </label>
+          </div>
+          <div class="answear-js">
           <label for="answear" class="answear answear--4" id="4">
             <svg class="mood" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 85">
               <g id="Group_71" data-name="Group 71" transform="translate(0.338 -0.34)">
@@ -207,6 +214,7 @@ if( ! isset($_SESSION['name']) ){
             </svg>
             <input type="button" onclick="greetUser(); return false" name="answear" value="mood4" />
           </label>
+          </div>
         </div>
       </form>
     </section>

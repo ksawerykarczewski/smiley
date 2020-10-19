@@ -937,12 +937,10 @@ svg {
   position: relative;
 }
 
-.indicator {
-  position: absolute;
-  width: 3rem;
-  height: auto;
-  right: 2rem;
-  bottom: 40%;
+@media (min-width: 766px) {
+  .wheel {
+    width: 25rem;
+  }
 }
 
 /* ---------------------------------------------------------------------------------------
