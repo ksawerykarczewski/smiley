@@ -2,6 +2,8 @@
     width: rem(350px);
     height: auto;
 
+    position: relative;
+
     // &::before {
     //     content: '';
     //     position: absolute;
@@ -12,4 +14,14 @@
     //     margin: 0;
     //     border-radius: 50%;
     // }
+}
+
+.indicator {
+
+    position: absolute;
+    
+    width: 3rem;
+    height: auto;
+    right: 2rem;
+    bottom: 40%;
 }

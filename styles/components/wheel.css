@@ -1,5 +1,14 @@
 .wheel {
   width: rem(350px);
   height: auto;
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+  width: 3rem;
+  height: auto;
+  right: 2rem;
+  bottom: 40%;
 }
 /*# sourceMappingURL=wheel.css.map */

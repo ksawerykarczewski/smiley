@@ -934,6 +934,15 @@ svg {
 .wheel {
   width: 19.44444rem;
   height: auto;
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+  width: 3rem;
+  height: auto;
+  right: 2rem;
+  bottom: 40%;
 }
 
 /* ---------------------------------------------------------------------------------------
