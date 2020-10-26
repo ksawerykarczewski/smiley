@@ -1,6 +1,6 @@
 let adjective1 = "adjective1";
 
-const svg =
+let svg =
     `<svg id="svg_element" xmlns="http://www.w3.org/2000/svg" width="315" height="315" viewBox="0 0 315 315">
 <g id="Group_234" data-name="Group 234" transform="translate(-43 -212)">
     <g id="Group_233" data-name="Group 233">
@@ -55,10 +55,7 @@ function getSvgUrl(svg) {
 }
 function svgUrlToPng(svgUrl, callback) {
     const svgImage = document.createElement('img');
-    // imgPreview.style.position = 'absolute';
-    // imgPreview.style.top = '-9999px';
     document.querySelector('.page__subject').appendChild(svgImage);
-    // document.body
     svgImage.onload = function () {
         const canvas = document.createElement('canvas');
         canvas.width = svgImage.clientWidth;
@@ -67,7 +64,17 @@ function svgUrlToPng(svgUrl, callback) {
         canvasCtx.drawImage(svgImage, 0, 0);
         const imgData = canvas.toDataURL('image/png');
         callback(imgData);
-        // document.body.removeChild(imgPreview);
+        // button.href = imgData;
+        console.log(button.href);
     };
+
     svgImage.src = svgUrl;
 }
+
+var button = document.getElementById('btn-download');
+button.addEventListener('click', function (e) {
+    let canvas = document.querySelector('canvas');
+    // var dataURL = canvas.toDataURL('image/png');
+    //button.href = canvas;
+    console.log(canvas.imgData);
+});

@@ -16,11 +16,11 @@ function displayEye() {
     // tl.to(document.querySelector("body"), { autoAlpha: 1, duration: 3.5, ease: "back.out(1)" });
 
     tl.set(eyeLid, { autoAlpha: 0, duration: 0, scale: 0, transformOrigin: "50% 40%" });
-    tl.set(answears, { autoAlpha: 0, duration: 0, scale: 0, transformOrigin: "50% 50%" });
+    // tl.set(answears, { autoAlpha: 0, duration: 0, scale: 0, transformOrigin: "50% 50%" });
     tl.to(svg, { autoAlpha: 0, duration: 0, scale: 0 }, 0);
     tl.to(svg, { autoAlpha: 1, duration: 1, scale: 1, ease: "back.out(1)" }, 0);
     tl.to(eyeLid, { autoAlpha: 1, duration: 1, scale: 1, ease: "back.out(1)" }, 0);
-    tl.to(answears, { autoAlpha: 1, duration: 1, scale: 1, ease: "back.out(1)" }, 0);
+    // tl.to(answears, { autoAlpha: 1, duration: 1, scale: 1, ease: "back.out(1)" }, 0);
 }
 
 displayEye();

@@ -1,13 +1,7 @@
-// function validate() {
-//     setTimeout(() => {
-//         window.location.href = 'mood.html';
-//     }, 4000);
-// }
-
 async function validate() {
     // AJAX only if there are no errors
     var form = event.target;
-    var connection = await fetch('../create-user.php', {
+    var connection = await fetch('../api/api-create-user.php', {
         method: "POST",
         body: new FormData(form)
     })

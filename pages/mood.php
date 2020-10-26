@@ -1,9 +1,9 @@
 <?php
-// session_start();
-// if( ! isset($_SESSION['name']) ){
-//   header('Location: login.html');
-//   exit;
-// }
+session_start();
+if( ! isset($_SESSION['name']) ){
+  header('Location: login.html');
+  exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
   </header>
   <main>
     <section class="page__subject">
-      <form method="POST" id="formAnswear" onsubmit="greetUser(); return false">
+      <form method="POST" id="formAnswear" onsubmit="greetUser(): return false" >
         <div class="answear-grid">
           <div class="answear-js">
           <label for="answear" class="answear answear--1" id="1">
@@ -72,7 +72,7 @@
                   stroke-width="10" />
               </g>
             </svg>
-            <input type="button" onclick="greetUser(); return false" name="answear" value="mood1" />
+            <input type="button" onclick="greetUser(); submitAnswear(); return false" name="answear" value="mood1" />
           </label>
           </div>
           <div class="answear-js">
@@ -119,7 +119,7 @@
                   stroke="#000" stroke-linecap="round" stroke-width="5" />
               </g>
             </svg>
-            <input type="button" onclick="greetUser(); return false" name="answear" value="mood2" />
+            <input type="button" onclick="greetUser(); submitAnswear(); return false" name="answear" value="mood2" />
           </label>
           </div>
           <div class="answear-js">
@@ -167,7 +167,7 @@
                   stroke-width="5" />
               </g>
             </svg>
-            <input type="button" onclick="greetUser(); return false" name="answear" value="mood3" />
+            <input type="button" onclick="greetUser(); submitAnswear(); return false" name="answear" value="mood3" />
           </label>
           </div>
           <div class="answear-js">
@@ -212,7 +212,7 @@
                 </g>
               </g>
             </svg>
-            <input type="button" onclick="greetUser(); return false" name="answear" value="mood4" />
+            <input type="button" onclick="greetUser(); submitAnswear(); return false" name="answear" value="mood4" />
           </label>
           </div>
         </div>
