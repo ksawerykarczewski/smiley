@@ -943,6 +943,27 @@ svg {
   }
 }
 
+.canvas__container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.canvas__canvas {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.canvas__mirror {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 /* ---------------------------------------------------------------------------------------
  *  Pages
  */
@@ -951,7 +972,7 @@ svg {
 }
 
 .page__heading {
-  padding: 2.11111rem 0.83333rem 0;
+  padding: 1.11111rem 0.83333rem 0;
   text-align: center;
 }
 

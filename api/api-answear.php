@@ -11,7 +11,7 @@ try{
   $answear1 = $_POST['answear1'];
 //   $answear2 = $_POST['answear2'] ? "0";
   $answear2 = ($_POST['answear2'] ? $_POST['answear2'] : '0');
-//   $answear3 = $_POST['answear3'];
+  $answear3 = ($_POST['answear3'] ? $_POST['answear3'] : '0');
 
   // INSERT INTO `tweets` (`iId`, `iUserFk`, `sTweet`, `bActive`, `dCreated`) VALUES (NULL, '1', 'Hi', '1', current_timestamp());
   $q = $db->prepare('INSERT INTO answears 
@@ -20,7 +20,7 @@ try{
   $q->bindValue(':userNameFk', $_SESSION['name'] );
   $q->bindValue(':answear1', $answear1 );
   $q->bindValue(':answear2', $answear2 );
-  $q->bindValue(':answear3', 2 );
+  $q->bindValue(':answear3', $answear3 );
 
   $q->execute();
   echo '{"message" : "answears created" }';

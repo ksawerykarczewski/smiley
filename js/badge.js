@@ -1,4 +1,3 @@
-let adjective1 = "adjective1";
 
 let svg =
     `<svg id="svg_element" xmlns="http://www.w3.org/2000/svg" width="315" height="315" viewBox="0 0 315 315">
@@ -65,7 +64,7 @@ function svgUrlToPng(svgUrl, callback) {
         const imgData = canvas.toDataURL('image/png');
         callback(imgData);
         // button.href = imgData;
-        console.log(button.href);
+        //console.log(button.href);
     };
 
     svgImage.src = svgUrl;
