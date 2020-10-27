@@ -21,4 +21,27 @@
     &:focus {
         outline: none;
     }
+
+    &--regular {
+        position: absolute;
+        padding: rem(15px) rem(10px);
+        bottom: rem(15px);
+        left: 50%;
+
+        width: auto;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        border-radius: rem(20px);
+        color: $color-black;
+        background: $color-background;
+        border: rem(3px) solid $color-black;
+        @include click-transitions;
+
+
+        &:hover {
+            @include click-transitions;
+            box-shadow: rem(5px) rem(5px) 0 0 $color-black;
+        }
+    }
 }

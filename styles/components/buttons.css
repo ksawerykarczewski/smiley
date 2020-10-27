@@ -17,4 +17,8 @@
 .button:focus {
   outline: none;
 }
+
+.button--regular {
+  outline: 3px solid pink;
+}
 /*# sourceMappingURL=buttons.css.map */
