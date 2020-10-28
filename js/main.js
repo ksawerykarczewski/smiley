@@ -8,22 +8,21 @@ var moods = document.querySelectorAll(".mood");
 
 // var answears = document.querySelectorAll(".answear-js");
 
-
 let link = document.querySelector('body').dataset.nextPage;
 
 async function greetUser() {
     let answear = event.target.value;
 
-    if (answear == "mood1") {
+    if (answear == "Happy") {
         answear = 'Thats great!';
     }
-    if (answear == "mood2") {
+    if (answear == "Apathetic") {
         answear = 'Everything is passable?';
     }
-    if (answear == "mood3") {
+    if (answear == "Sad") {
         answear = 'We are sorry to hear that';
     }
-    if (answear == "mood4") {
+    if (answear == "Numb") {
         answear = 'No words to describe it?';
     }
 
@@ -111,3 +110,23 @@ window.ontouchstart = function (event) {
         modal.style.display = "none";
     }
 }
+
+
+// setInterval(async function () {
+//     let connection = await fetch('../api/api-read.php')
+//     //console.log(connection);
+//     if (connection.status != 200) {
+//         alert('Something is wrong in the system')
+//     }
+
+//     let sTweet = await connection.text()
+//     let jTweet = JSON.parse(sTweet) // PHP json_decode
+//     console.log(jTweet);
+//     // var divTweet = `
+//     // <div class="tweet" id="${jTweet.id}">
+//     //   <p>${jTweet.title}</p>
+//     //   <p>${jTweet.body}</p>
+//     //   <button>delete</button>
+//     // </div>`  
+//     // document.querySelector("#tweets").insertAdjacentHTML('afterbegin', divTweet)
+// }, 1000)

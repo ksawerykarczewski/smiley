@@ -1,28 +1,50 @@
 window.onload = function () {
-    generateBadge();
+    // generateBadge();
+    getAnswear();
 };
 
-function generateBadge() {
-    let name = 'name';
 
-    let adjective1 = 'Bitter';
+async function getAnswear() {
+    let connection = await fetch('../api/api-read.php')
+    //console.log(connection);
+    if (connection.status != 200) {
+        alert('Something is wrong in the system')
+    }
+    console.log(connection);
+
+    // let sAnswear = await connection.text()
+    // let jAnswear = JSON.parse(sAnswear) // PHP json_decode
+    // console.log(sAnswear);
+};
+
+function generateBadge(jAnswear) {
+    let name = 'name';
+    let adjective1 = jAnswear;
     let adjective2 = 'Idiot';
     let adjective3 = 'Moron';
+
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="315" height="315" viewBox="0 0 315 315">
+    <style>
+        text {
+            fill: red;
+            text-anchor:middle;
+            dominant-baseline: middle;
+        }
+    </style>
         <g id="Rectangle_287" data-name="Rectangle 287" transform="translate(12 11)" stroke="#000" stroke-width="5">
             <rect width="303" height="304" rx="20" stroke="none"/>
-            <rect x="2.5" y="2.5" width="298" height="299" rx="17.5" fill="none"/>
+            <rect x="2.5" y="2.5" width="298" height="299" rx="17.5" fill="none" stroke="none"/>
         </g>
         <g id="Rectangle_288" data-name="Rectangle 288" fill="#f4f2ee" stroke="#000" stroke-width="5">
             <rect width="303" height="304" rx="20" stroke="none"/>
-            <rect x="2.5" y="2.5" width="298" height="299" rx="17.5" fill="none"/>
+            <rect x="2.5" y="2.5" width="298" height="299" rx="17.5" fill="none" stroke-width="6" stroke="black"/>
         </g>
         <g id="Group_238" data-name="Group 238" transform="translate(-7014 -13595)">
-            <text id="_1.some_adjective" data-name="1.some adjective" transform="translate(7166 13733)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan x="-128.898" y="0">${adjective1}</tspan></text>
-            <text id="_2.some_adjective" data-name="2.some adjective" transform="translate(7166 13783)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan x="-131.27" y="0">${adjective2}</tspan></text>
-            <text id="_3.some_adjective" data-name="3.some adjective" transform="translate(7166 13833)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan x="-130.975" y="0">${adjective3}</tspan></text>
-            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-BoldItalic, Monarcha" font-weight="700" font-style="italic"><tspan x="-60.093" y="0">${name} is a</tspan></text>
+            <text id="_1.some_adjective" data-name="1.some adjective" transform="translate(7166 13733)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${adjective1}</tspan></text>
+            <text id="_2.some_adjective" data-name="2.some adjective" transform="translate(7166 13783)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${adjective2}</tspan></text>
+            <text id="_3.some_adjective" data-name="3.some adjective" transform="translate(7166 13833)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${adjective3}</tspan></text>
+            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-BoldItalic, Monarcha" font-weight="700" font-style="italic"><tspan y="0">${name} is a</tspan></text>
         </g>
     </svg>
 `

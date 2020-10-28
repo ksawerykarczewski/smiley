@@ -4,6 +4,7 @@ let answear;
 let modal = document.querySelector(".modal-js");
 let wheel = document.querySelector('#wheel');
 let wheelBoard = document.querySelector('#wheel__board');
+let buttonWheel = document.querySelector('.button-wheel');
 
 window.onload = function () {
     var tl = gsap.timeline({ repeat: 0 });
@@ -16,14 +17,15 @@ window.onload = function () {
 }
 
 function speenWheel() {
+    buttonWheel.disabled = true;
     var myRotation = randomNumber(8, 24) * 45;
     let indicator = document.querySelector(".indicator");
 
     var tl1 = gsap.timeline({ onComplete: displayModal });
-    tl1.to(wheelBoard, { transformOrigin: "50% 50%", delay: .2, rotation: "+=" + myRotation + "_cw", ease: "back.out(.8)", duration: 5 });
+    tl1.to(wheelBoard, { transformOrigin: "50% 50%", delay: .2, rotation: "+=" + myRotation + "_cw", ease: "back.out(.8)", duration: 4 });
 
     var tl2 = gsap.timeline();
-    tl2.to(indicator, { x: 15, ease: "power1.inOut", repeat: -1, duration: .5, yoyo: true }, 4);
+    tl2.to(indicator, { x: 15, ease: "power1.inOut", repeat: -1, duration: .5, yoyo: true }, 3);
 
     function randomNumber(min, max) {
         return Math.floor(Math.random() * (1 + max - min) + min);
@@ -81,7 +83,7 @@ function displayModal() {
 
     let responseToUser = `
     <div class="modal__content--2">
-      <h1 class="modal__heading">${answear}</h1>
+      <h1 class="modal__heading">${answear} it is!</h1>
       <h2 class="modal__description">And on that note, we would like to</h2>
         <button class="button modal__button--2" onclick="location.href='${link}.html'">Finish</button>
     </div>
