@@ -72,7 +72,7 @@ if( ! isset($_SESSION['name']) ){
                   stroke-width="10" />
               </g>
             </svg>
-            <input type="button" onclick="greetUser(); submitAnswear(); return false" name="answear" value="mood1" />
+            <input type="button" onclick="greetUser(); submitAnswear1(); return false" name="answear" value="mood1" />
           </label>
           </div>
           <div class="answear-js">
@@ -119,7 +119,7 @@ if( ! isset($_SESSION['name']) ){
                   stroke="#000" stroke-linecap="round" stroke-width="5" />
               </g>
             </svg>
-            <input type="button" onclick="greetUser(); submitAnswear(); return false" name="answear" value="mood2" />
+            <input type="button" onclick="greetUser(); submitAnswear1(); return false" name="answear" value="mood2" />
           </label>
           </div>
           <div class="answear-js">
@@ -167,7 +167,7 @@ if( ! isset($_SESSION['name']) ){
                   stroke-width="5" />
               </g>
             </svg>
-            <input type="button" onclick="greetUser(); submitAnswear(); return false" name="answear" value="mood3" />
+            <input type="button" onclick="greetUser(); submitAnswear1(); return false" name="answear" value="mood3" />
           </label>
           </div>
           <div class="answear-js">
@@ -212,7 +212,7 @@ if( ! isset($_SESSION['name']) ){
                 </g>
               </g>
             </svg>
-            <input type="button" onclick="greetUser(); submitAnswear(); return false" name="answear" value="mood4" />
+            <input type="button" onclick="greetUser(); submitAnswear1(); return false" name="answear" value="mood4" />
           </label>
           </div>
         </div>

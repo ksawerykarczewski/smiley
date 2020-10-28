@@ -7,7 +7,7 @@ var buttonAnswear = document.querySelectorAll(".answear");
 var eyeStreams = document.querySelector(".eye__streams");
 var eyeLid = document.querySelector(".eye__eyelid");
 var answears = document.querySelectorAll(".answear");
-console.log(answears);
+//console.log(answears);
 
 function displayEye() {
     var tl = gsap.timeline();

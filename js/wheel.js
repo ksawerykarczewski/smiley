@@ -1,6 +1,6 @@
 "use strict";
 
-let heading;
+let answear;
 let modal = document.querySelector(".modal-js");
 let wheel = document.querySelector('#wheel');
 let wheelBoard = document.querySelector('#wheel__board');
@@ -31,36 +31,48 @@ function speenWheel() {
 
     if (myRotation == 1080 || myRotation == 720 || myRotation == 360) {
         console.log("Pandemics");
-        heading = 'Pandemics';
+        answear = 'Pandemics';
     }
     if (myRotation == 540 || myRotation == 900) {
         console.log("Flood");
-        heading = 'Flood';
+        answear = 'Flood';
     }
     if (myRotation == 495 || myRotation == 855) {
         console.log("Meteor")
-        heading = 'Meteor';
+        answear = 'Meteor';
     }
     if (myRotation == 450 || myRotation == 810) {
         console.log("Climate Change")
-        heading = 'Climate Change';
+        answear = 'Climate Change';
     }
     if (myRotation == 675 || myRotation == 1035) {
         console.log("Ecological Collapse")
-        heading = 'Ecological Collapse';
+        answear = 'Ecological Collapse';
     }
     if (myRotation == 945 || myRotation == 585) {
         console.log("Asteroid Impact")
-        heading = 'Asteroid Impact';
+        answear = 'Asteroid Impact';
     }
     if (myRotation == 765 || myRotation == 405) {
         console.log("Nuclear War")
-        heading = 'Nuclear War';
+        answear = 'Nuclear War';
     }
     if (myRotation == 990 || myRotation == 630) {
         console.log("AI")
-        heading = 'AI';
+        answear = 'AI';
     }
+    submitAnswear3(answear);
+}
+
+// The user has clicked on the submit button
+async function submitAnswear3(answear) {
+    var form = new FormData();
+    form.append("answear3", answear);
+    var connection = await fetch('../api/api-answear-3.php', {
+        "method": "POST",
+        "body": form
+    })
+    console.log(connection);
 }
 
 function displayModal() {
@@ -69,7 +81,7 @@ function displayModal() {
 
     let responseToUser = `
     <div class="modal__content--2">
-      <h1 class="modal__heading">${heading}</h1>
+      <h1 class="modal__heading">${answear}</h1>
       <h2 class="modal__description">And on that note, we would like to</h2>
         <button class="button modal__button--2" onclick="location.href='${link}.html'">Finish</button>
     </div>
