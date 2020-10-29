@@ -15,11 +15,12 @@ async function getAnswear() {
     // let sAnswear = await connection.text()
     // let jAnswear = JSON.parse(sAnswear) // PHP json_decode
     // console.log(sAnswear);
+    generateBadge();
 };
 
-function generateBadge(jAnswear) {
+function generateBadge() {
     let name = 'name';
-    let adjective1 = jAnswear;
+    let adjective1 = "jAnswear";
     let adjective2 = 'Idiot';
     let adjective3 = 'Moron';
 

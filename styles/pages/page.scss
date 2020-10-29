@@ -1,4 +1,7 @@
 .page {
+    cursor: auto;
+    cursor: url(../assets/cursor.svg) 4 12, auto;
+
     background-color: $color-background;
 
     &__heading {
@@ -22,6 +25,9 @@
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
+}
+.page-loader{
+    cursor: progress;
 }
 
 @include mq-regular {

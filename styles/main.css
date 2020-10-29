@@ -581,7 +581,7 @@ select {
   border: none;
   outline: none;
   background: none;
-  cursor: pointer;
+  cursor: url(../assets/cursor-pointer.svg) 4 12, auto;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -594,13 +594,9 @@ select {
 }
 
 .button--regular {
-  position: absolute;
   padding: 0.83333rem 0.55556rem;
-  bottom: 0.83333rem;
-  left: 50%;
-  width: auto;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  width: 8.33333rem;
+  text-align: center;
   border-radius: 1.11111rem;
   color: #000000;
   background: #F4F2EE;
@@ -618,6 +614,30 @@ select {
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
   -webkit-box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
           box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
+}
+
+.buttton-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  gap: 1.11111rem;
+}
+
+@media (min-width: 766px) {
+  .button--regular {
+    width: auto;
+  }
 }
 
 .list {
@@ -664,7 +684,7 @@ svg {
   border-radius: 1.11111rem;
   -webkit-box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
           box-shadow: 0.27778rem 0.27778rem 0 0 #000000;
-  cursor: pointer;
+  cursor: url(../assets/cursor-pointer.svg) 4 12, auto;
   will-change: transform, opacity;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -681,7 +701,7 @@ svg {
   top: 0;
   left: 0;
   opacity: 0;
-  cursor: pointer;
+  cursor: url(../assets/cursor-pointer.svg) 4 12, auto;
 }
 
 .answear--narrow {
@@ -874,6 +894,11 @@ svg {
   display: inline-flex;
 }
 
+.loader__first {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .loader__svg {
   -webkit-animation-name: spin;
   -webkit-animation-duration: 4000ms;
@@ -995,6 +1020,8 @@ svg {
  *  Pages
  */
 .page {
+  cursor: auto;
+  cursor: url(../assets/cursor.svg) 4 12, auto;
   background-color: #F4F2EE;
 }
 
@@ -1017,6 +1044,10 @@ svg {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.page-loader {
+  cursor: progress;
 }
 
 @media (min-width: 766px) {

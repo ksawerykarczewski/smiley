@@ -27,7 +27,8 @@ svg {
     box-shadow: rem(5px) rem(5px) 0 0 #000000;
 
     // font-size: 0;
-    cursor: pointer;
+    //cursor: pointer;
+    cursor: url(../assets/cursor-pointer.svg) 4 12, auto;
     will-change: transform, opacity;
 
     -webkit-transform-style: preserve-3d;
@@ -43,7 +44,8 @@ svg {
         left: 0;
 
         opacity: 0;
-        cursor: pointer;
+        // cursor: pointer;
+        cursor: url(../assets/cursor-pointer.svg) 4 12, auto;
     }
 
     &--narrow {

@@ -12,6 +12,10 @@
     span {
         display: inline-flex;
     }
+
+    &__first {
+        transform: rotate(180deg);
+    }
 }
   
 .loader__svg {
