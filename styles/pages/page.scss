@@ -1,6 +1,23 @@
+.circle {
+    width: rem(60px);
+    height: rem(60px);
+    background-image: url("../assets/cursor.svg");
+    border: 1px solid red;
+    //border: rem(1px) solid #000000;
+    z-index: 100 !important;
+    pointer-events: none;
+    position: absolute;
+    // display: table-cell;
+    // text-align: center;
+    // vertical-align: middle;
+    //mix-blend-mode: difference;
+  
+    font-size: rem(8px);
+}
+
 .page {
     cursor: auto;
-    cursor: url(../assets/cursor.svg) 4 12, auto;
+    // cursor: url(../assets/cursor.svg) 4 12, auto;
 
     background-color: $color-background;
 
@@ -16,6 +33,13 @@
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+
+        &--long {
+            position: relative;
+            padding: rem(30px);
+
+            @include montserrat-regular;
+        }
     }
 
     &__subject-eye {
@@ -26,6 +50,7 @@
         transform: translate(-50%, -50%);
     }
 }
+
 .page-loader{
     cursor: progress;
 }
@@ -38,6 +63,21 @@
 
         &__subject {
             padding: rem(28px) rem(50px);
+
+            &--long {
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* position: revert; */
+                padding: rem(100px);
+    
+                @include montserrat-regular;
+
+                &__text {
+                    width: rem(500px);
+                }
+            }
         }
 
         &__subject-eye {
