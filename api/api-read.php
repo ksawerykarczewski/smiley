@@ -3,22 +3,31 @@
 session_start();
 require_once( __DIR__.'/../private/mariadb.php' );
 try {
+    $_POST["id"] = "5f9d34c63dc2d";
 
     $q = $db->prepare('SELECT * FROM answears');
     $q->execute();
-    //array with json objects
     $aRows = $q->fetchAll();
-    //echo json_encode($aRows[0][0]);
-
-    if ($_POST["id"] == $aRows[0][0]) {
-
-        $answears = [$aRows[0][1], $aRows[0][2], $aRows[0][3], $aRows[0][4]];
-        // echo json_encode($aRows[0][3]);
-        echo json_encode($answears);
-        //echo $answears;
-        header('Content-Type: application/json');
-        exit();
+    //echo
+    foreach ($aRows as $aRow) {
+      if ($aRow['userIdFk'] == $_POST["id"]) {
+        echo json_encode($aRow);
+      }
     }
+
+    // if ($_POST["id"] == ) {
+    //   # code...
+    // }
+
+    // if ($_POST["id"] == $aRows[0][0]) {
+
+    //     $answears = [$aRows[0][1], $aRows[0][2], $aRows[0][3], $aRows[0][4]];
+    //     // echo json_encode($aRows[0][3]);
+    //     echo json_encode($answears);
+    //     //echo $answears;
+    //     header('Content-Type: application/json');
+    //     exit();
+    // }
 
     // $anwear1 = json_encode($aRows[0][2]);
     // $anwear2 = json_encode($aRows[0][3]);

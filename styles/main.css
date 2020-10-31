@@ -667,6 +667,7 @@ select {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0;
     bottom: 0;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);

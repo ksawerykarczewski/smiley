@@ -21,8 +21,6 @@ try {
 
     header('Content-Type: application/json');
     http_response_code(200);
-    // echo '{"message" : "user created", "key":"'.$key.'" }';
-
 } catch (Exception $ex) {
     echo $ex;
     sendError(500, 'system under maintainance', __LINE__);

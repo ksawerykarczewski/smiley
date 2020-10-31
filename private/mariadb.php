@@ -8,9 +8,9 @@ try{
   // utf8mb4 every character and also emojies
   $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // try-catch
-    // PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC 
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC 
     // PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ 
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_NUM // [[],[],[]]
+    //PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_NUM // [[],[],[]]
   ];
   $db = new PDO(  $dbConnection, 
                   $dbUserName, 

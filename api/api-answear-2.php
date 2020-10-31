@@ -17,13 +17,10 @@ try {
     $query->execute();
 
     //TODO - SESSION
-    //$_SESSION['answear1'] = $_POST['answear1'];
     $_SESSION['answear2'] = $_POST['answear2'];
-    //$_SESSION['answear3'] = $_POST['answear3'];
 
     header('Content-Type: application/json');
     http_response_code(200);
-    // echo '{"message" : "user created", "key":"'.$key.'" }';
 
 } catch (Exception $ex) {
     echo $ex;

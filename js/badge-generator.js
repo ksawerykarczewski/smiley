@@ -12,23 +12,26 @@ async function getAnswear() {
     }
     console.log(connection);
 
-    // let sAnswear = await connection.text()
-    // let jAnswear = JSON.parse(sAnswear) // PHP json_decode
-    // console.log(sAnswear);
-    generateBadge();
+    let sAnswear = await connection.text()
+    let jAnswear = JSON.parse(sAnswear) // PHP json_decode
+    console.log(jAnswear);
+    generateBadge(jAnswear);
 };
 
-function generateBadge() {
-    let name = 'name';
-    let adjective1 = "jAnswear";
-    let adjective2 = 'Idiot';
-    let adjective3 = 'Moron';
+function generateBadge(jAnswear) {
+
+    let answear1 = jAnswear['answear1'];
+    let answear2 = jAnswear['answear2'];
+    let answear3 = jAnswear['answear3'];
+    //if statement for changing 
+    //answears into adjectives
+
 
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="315" height="315" viewBox="0 0 315 315">
     <style>
         text {
-            fill: red;
+            fill: black;
             text-anchor:middle;
             dominant-baseline: middle;
         }
@@ -42,10 +45,10 @@ function generateBadge() {
             <rect x="2.5" y="2.5" width="298" height="299" rx="17.5" fill="none" stroke-width="6" stroke="black"/>
         </g>
         <g id="Group_238" data-name="Group 238" transform="translate(-7014 -13595)">
-            <text id="_1.some_adjective" data-name="1.some adjective" transform="translate(7166 13733)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${adjective1}</tspan></text>
-            <text id="_2.some_adjective" data-name="2.some adjective" transform="translate(7166 13783)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${adjective2}</tspan></text>
-            <text id="_3.some_adjective" data-name="3.some adjective" transform="translate(7166 13833)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${adjective3}</tspan></text>
-            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-BoldItalic, Monarcha" font-weight="700" font-style="italic"><tspan y="0">${name} is a</tspan></text>
+            <text id="_1.some_adjective" data-name="1.some adjective" transform="translate(7166 13733)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear1}</tspan></text>
+            <text id="_2.some_adjective" data-name="2.some adjective" transform="translate(7166 13783)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear2}</tspan></text>
+            <text id="_3.some_adjective" data-name="3.some adjective" transform="translate(7166 13833)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear3}</tspan></text>
+            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-BoldItalic, Monarcha" font-weight="700" font-style="italic"><tspan y="0">${jAnswear['userNameFk']} is a</tspan></text>
         </g>
     </svg>
 `
@@ -89,3 +92,10 @@ function generateBadge() {
         svgImage.src = svgUrl;
     }
 }
+
+document.querySelector("#badge-download").addEventListener("click", destroySession);
+
+function destroySession() {
+    console.log('download');
+}
+
