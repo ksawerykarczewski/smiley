@@ -40,8 +40,8 @@ function speenWheel() {
         answear = 'Flood';
     }
     if (myRotation == 495 || myRotation == 855) {
-        console.log("Meteor")
-        answear = 'Meteor';
+        console.log("Aliens")
+        answear = 'Aliens';
     }
     if (myRotation == 450 || myRotation == 810) {
         console.log("Climate Change")

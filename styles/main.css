@@ -1040,19 +1040,23 @@ canvas {
 /* ---------------------------------------------------------------------------------------
  *  Pages
  */
+::-moz-selection {
+  /* Code for Firefox */
+  color: #F4F2EE;
+  background: #000000;
+}
+
+::selection {
+  color: #F4F2EE;
+  background: #000000;
+}
+
 .circle {
-  width: 3.33333rem;
-  height: 3.33333rem;
-  background-image: url("../assets/cursor.svg");
-  border: 1px solid red;
-  z-index: 100 !important;
-  pointer-events: none;
-  position: absolute;
-  font-size: 0.44444rem;
+  display: none;
 }
 
 .page {
-  cursor: auto;
+  cursor: url("../assets/images/cursor.svg") 12 12, auto;
   background-color: #F4F2EE;
 }
 
@@ -1119,6 +1123,15 @@ canvas {
 }
 
 @media (min-width: 1024px) {
+  .circle {
+    display: block;
+    width: 3.88889rem;
+    height: 3.88889rem;
+    z-index: 100 !important;
+    pointer-events: none;
+    position: absolute;
+    font-size: 0.44444rem;
+  }
   .page__heading {
     padding: 1.33333rem 0 0;
   }

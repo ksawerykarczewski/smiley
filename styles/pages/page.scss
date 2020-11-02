@@ -1,24 +1,20 @@
-.circle {
-    width: rem(60px);
-    height: rem(60px);
-    background-image: url("../assets/cursor.svg");
-    border: 1px solid red;
-    //border: rem(1px) solid #000000;
-    z-index: 100 !important;
-    pointer-events: none;
-    position: absolute;
-    // display: table-cell;
-    // text-align: center;
-    // vertical-align: middle;
-    //mix-blend-mode: difference;
+::-moz-selection { /* Code for Firefox */
+    color: $color-background;
+    background: $color-black;
+}
   
-    font-size: rem(8px);
+::selection {
+    color: $color-background;
+    background: $color-black;
+}
+
+.circle {
+    display: none;
 }
 
 .page {
-    cursor: auto;
-    // cursor: url(../assets/cursor.svg) 4 12, auto;
-
+    //cursor: auto;
+    cursor: url("../assets/images/cursor.svg") 12 12, auto;
     background-color: $color-background;
 
     &__heading {
@@ -89,6 +85,25 @@
 }
 
 @include mq-wide {
+    .circle {
+        display: block;
+        
+        width: rem(70px);
+        height: rem(70px);
+        // background-image: url("../assets/images/cursor.png");
+        // background-repeat: no-repeat;
+        //border: 1px solid red;
+        //border: rem(1px) solid #000000;
+        z-index: 100 !important;
+        pointer-events: none;
+        position: absolute;
+        // display: table-cell;
+        // text-align: center;
+        // vertical-align: middle;
+        //mix-blend-mode: difference;
+      
+        font-size: rem(8px);
+    }
     .page {
         &__heading {
             padding: rem(24px) 0 0;

@@ -25,3 +25,12 @@ try {
     echo $ex;
     sendError(500, 'system under maintainance', __LINE__);
 }
+// ############################################################
+// ############################################################
+// ############################################################
+function sendError($iErrorCode, $sMessage, $iLine){
+    http_response_code($iErrorCode);
+    header('Content-Type: application/json');
+    echo '{"message":"'.$sMessage.'", "error":"'.$iLine.'"}';
+    exit();
+  }

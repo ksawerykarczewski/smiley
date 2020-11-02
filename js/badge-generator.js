@@ -31,17 +31,25 @@ function generateBadge(jAnswear) {
     let answear2 = jAnswear['answear2'];
     let answear3 = jAnswear['answear3'];
 
-
+    //1
+    if (answear1 == 'Happy') {
+        answear1 = "Naive";
+    }
     if (answear1 == 'Apathetic') {
-        answear1 = "Adjective1";
+        answear1 = "Dull";
     }
-    if (answear2 == 'Radical') {
-        answear2 = "Adjective2";
+    if (answear1 == 'Sad') {
+        answear1 = "Bitter";
     }
-    if (answear3 == 'Meteor') {
-        answear3 = "Adjective3";
+    if (answear1 == 'Numb') {
+        answear1 = "Numb";
     }
+    //3
+    // if (answear3 == 'Aliens') {
+    //     answear3 = "Aliens";
+    // }
 
+    answear3 = "Moron";
 
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="315" height="315" viewBox="0 0 315 315">

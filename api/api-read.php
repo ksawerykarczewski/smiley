@@ -10,33 +10,11 @@ try {
     $aRows = $q->fetchAll();
     //echo
     foreach ($aRows as $aRow) {
-      if ($aRow['userIdFk'] == $_POST["id"]) {
+      if ($aRow['userIdFk'] == $_SESSION["id"]) {
         echo json_encode($aRow);
       }
     }
 
-    // if ($_POST["id"] == ) {
-    //   # code...
-    // }
-
-    // if ($_POST["id"] == $aRows[0][0]) {
-
-    //     $answears = [$aRows[0][1], $aRows[0][2], $aRows[0][3], $aRows[0][4]];
-    //     // echo json_encode($aRows[0][3]);
-    //     echo json_encode($answears);
-    //     //echo $answears;
-    //     header('Content-Type: application/json');
-    //     exit();
-    // }
-
-    // $anwear1 = json_encode($aRows[0][2]);
-    // $anwear2 = json_encode($aRows[0][3]);
-    // $anwear3 = json_encode($aRows[0][4]);
-    // echo $anwear3;
-    // echo $anwear2;
-    // echo $anwear3;
-
-    // echo json_encode($data);
     header('Content-Type: application/json');
     http_response_code(200);
     exit();  
