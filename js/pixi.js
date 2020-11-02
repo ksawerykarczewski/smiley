@@ -1,75 +1,216 @@
-// let app;
-// let player;
+// -------
+// SETUP PIXI
+// ('../assets/images/1.png')
+// -------
 
-// window.onload = function () {
-//     app = new PIXI.Application(
-//         {
-//             width: 800,
-//             height: 600,
-//             backgroundColor: 0xAAAAA
-//         }
-//     );
+let Application = PIXI.Application;
+let loader = PIXI.Loader.shared;
+let resources = PIXI.Loader.shared.resources;
+let Sprite = PIXI.Sprite;
+let TextureCache = PIXI.utils.TextureCache;
+let Rectangle = PIXI.Rectangle;
+let Container = PIXI.Container;
 
-//     document.body.appendChild(app.view);
+// -----
+// Stage
+// -----
 
-//     //preload assets
-//     app.loader.baseUrl = "../assets/images";
-//     app.loader.add("player", "1.png");
-//     app.loader.onComplete.add(doneLoading);
+let siteWidth = document.body.clientWidth;
+let siteHeight = document.body.clientHeight;
+let app = new Application({
+    width: siteWidth,
+    height: siteHeight,
+    resolution: window.devicePixelRatio,
+    autoDensity: true,
+    transparent: true,
 
-//     app.loader.load();
-
-//     function doneLoading(e) {
-//         player = PIXI.Sprite.from(app.loader.resources.player.texture);
-//         player.x = app.view.width / 2;
-//         player.y = app.view.height / 2;
-//         player.anchor.set(0.5);
-
-//         app.stage.addChild(player);
-//     }
-// }
-// setup canvas
-
-const app = new PIXI.Application({
+    view: this.canvas,
+    autoResize: true,
+    antialias: true,
     transparent: true
 });
+
+window.addEventListener('resize', resize);
+
+function resize() {
+    siteWidth = document.body.clientWidth;
+    siteHeight = document.body.clientHeight;
+    app.renderer.resize(siteWidth, siteHeight);
+    //app.renderer.resize(window.innerWidth, window.innerHeight)
+}
+
 document.body.appendChild(app.view);
 
-let bol = false;
+// holder to store the aliens
+const aliens = [];
 
-// create a texture from an image path
-const texture = PIXI.Texture.from('../assets/images/1.png');
+const totalDudes = 3;
 
-// create a second texture
-const secondTexture = PIXI.Texture.from('../assets/images/2.png');
+for (let i = 0; i < totalDudes; i++) {
+    // create a new Sprite that uses the image name that we just generated as its source
 
-// create a new Sprite using the texture
-const dude = new PIXI.Sprite(texture);
+    const dude = PIXI.Sprite.from('../assets/images/1.png');
+    //let dude = PIXI.Texture.from('../assets/images/' + i + '.png');
 
-// center the sprites anchor point
-dude.anchor.set(0.5);
+    // set the anchor point so the texture is centerd on the sprite
+    dude.anchor.set(0.5);
 
-// move the sprite to the center of the screen
-dude.x = app.screen.width / 2;
-dude.y = app.screen.height / 2;
+    // set a random scale for the dude - no point them all being the same size!
+    dude.scale.set(0.6);
 
-app.stage.addChild(dude);
+    // finally lets set the dude to be at a random position..
+    dude.x = Math.random() * app.screen.width;
+    dude.y = Math.random() * app.screen.height;
 
-// make the sprite interactive
-dude.interactive = true;
-dude.buttonMode = true;
+    //dude.tint = Math.random() * 0xFFFFFF;
 
-dude.on('pointertap', () => {
-    bol = !bol;
-    if (bol) {
-        dude.texture = secondTexture;
-    } else {
-        dude.texture = texture;
+    // create some extra properties that will control movement :
+    // create a random direction in radians. This is a number between 0 and PI*2 which is the equivalent of 0 - 360 degrees
+    dude.direction = Math.random() * Math.PI;
+    //dude.direction = Math.floor((Math.random() * 100) + 1);
+
+    // this number will be used to modify the direction of the dude over time
+    dude.turningSpeed = Math.random() - 0.5;
+
+    // create a random speed for the dude between 2 - 4
+    dude.speed = 1.5 + Math.random() * 2;
+
+    // finally we push the dude into the aliens array so it it can be easily accessed later
+    aliens.push(dude);
+
+    app.stage.addChild(dude);
+}
+for (let i = 0; i < totalDudes; i++) {
+    // create a new Sprite that uses the image name that we just generated as its source
+
+    const dude = PIXI.Sprite.from('../assets/images/2.png');
+    //let dude = PIXI.Texture.from('../assets/images/' + i + '.png');
+
+    // set the anchor point so the texture is centerd on the sprite
+    dude.anchor.set(0.5);
+
+    // set a random scale for the dude - no point them all being the same size!
+    dude.scale.set(0.6);
+
+    // finally lets set the dude to be at a random position..
+    dude.x = Math.random() * app.screen.width;
+    dude.y = Math.random() * app.screen.height;
+
+    //dude.tint = Math.random() * 0xFFFFFF;
+
+    // create some extra properties that will control movement :
+    // create a random direction in radians. This is a number between 0 and PI*2 which is the equivalent of 0 - 360 degrees
+    dude.direction = Math.random() * Math.PI;
+    //dude.direction = Math.floor((Math.random() * 100) + 1);
+
+    // this number will be used to modify the direction of the dude over time
+    dude.turningSpeed = Math.random() - 0.5;
+
+    // create a random speed for the dude between 2 - 4
+    dude.speed = 1.5 + Math.random() * 2;
+
+    // finally we push the dude into the aliens array so it it can be easily accessed later
+    aliens.push(dude);
+
+    app.stage.addChild(dude);
+}
+for (let i = 0; i < totalDudes; i++) {
+    // create a new Sprite that uses the image name that we just generated as its source
+
+    const dude = PIXI.Sprite.from('../assets/images/3.png');
+    //let dude = PIXI.Texture.from('../assets/images/' + i + '.png');
+
+    // set the anchor point so the texture is centerd on the sprite
+    dude.anchor.set(0.5);
+
+    // set a random scale for the dude - no point them all being the same size!
+    dude.scale.set(0.6);
+
+    // finally lets set the dude to be at a random position..
+    dude.x = Math.random() * app.screen.width;
+    dude.y = Math.random() * app.screen.height;
+
+    //dude.tint = Math.random() * 0xFFFFFF;
+
+    // create some extra properties that will control movement :
+    // create a random direction in radians. This is a number between 0 and PI*2 which is the equivalent of 0 - 360 degrees
+    dude.direction = Math.random() * Math.PI;
+    //dude.direction = Math.floor((Math.random() * 100) + 1);
+
+    // this number will be used to modify the direction of the dude over time
+    dude.turningSpeed = Math.random() - 0.5;
+
+    // create a random speed for the dude between 2 - 4
+    dude.speed = 1.5 + Math.random() * 2;
+
+    // finally we push the dude into the aliens array so it it can be easily accessed later
+    aliens.push(dude);
+
+    app.stage.addChild(dude);
+}
+for (let i = 0; i < totalDudes; i++) {
+    // create a new Sprite that uses the image name that we just generated as its source
+
+    const dude = PIXI.Sprite.from('../assets/images/4.png');
+    //let dude = PIXI.Texture.from('../assets/images/' + i + '.png');
+
+    // set the anchor point so the texture is centerd on the sprite
+    dude.anchor.set(0.5);
+
+    // set a random scale for the dude - no point them all being the same size!
+    dude.scale.set(0.6);
+
+    // finally lets set the dude to be at a random position..
+    dude.x = Math.random() * app.screen.width;
+    dude.y = Math.random() * app.screen.height;
+
+    //dude.tint = Math.random() * 0xFFFFFF;
+
+    // create some extra properties that will control movement :
+    // create a random direction in radians. This is a number between 0 and PI*2 which is the equivalent of 0 - 360 degrees
+    dude.direction = Math.random() * Math.PI;
+    //dude.direction = Math.floor((Math.random() * 100) + 1);
+
+    // this number will be used to modify the direction of the dude over time
+    dude.turningSpeed = Math.random() - 0.5;
+
+    // create a random speed for the dude between 2 - 4
+    dude.speed = 1.5 + Math.random() * 2;
+
+    // finally we push the dude into the aliens array so it it can be easily accessed later
+    aliens.push(dude);
+
+    app.stage.addChild(dude);
+}
+// create a bounding box for the little dudes
+const dudeBoundsPadding = 100;
+const dudeBounds = new PIXI.Rectangle(-dudeBoundsPadding,
+    -dudeBoundsPadding,
+    app.screen.width + dudeBoundsPadding * 2,
+    app.screen.height + dudeBoundsPadding * 2);
+
+app.ticker.add((delta) => {
+    // iterate through the dudes and update their position
+    for (let i = 0; i < aliens.length; i++) {
+        const dude = aliens[i];
+        dude.direction += dude.turningSpeed * 0.01;
+        dude.x += Math.sin(dude.direction) * dude.speed;
+        dude.y += Math.cos(dude.direction) * dude.speed;
+        //dude.rotation = -dude.direction - Math.PI / 2;
+        dude.rotation -= 0.05 * delta;
+
+        // wrap the dudes by testing their bounds...
+        if (dude.x < dudeBounds.x) {
+            dude.x += dudeBounds.width;
+        } else if (dude.x > dudeBounds.x + dudeBounds.width) {
+            dude.x -= dudeBounds.width;
+        }
+
+        if (dude.y < dudeBounds.y) {
+            dude.y += dudeBounds.height;
+        } else if (dude.y > dudeBounds.y + dudeBounds.height) {
+            dude.y -= dudeBounds.height;
+        }
     }
-});
-
-app.ticker.add(() => {
-    // just for fun, let's rotate mr rabbit a little
-    dude.rotation += 0.1;
 });
 

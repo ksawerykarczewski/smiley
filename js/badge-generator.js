@@ -14,17 +14,33 @@ async function getAnswear() {
 
     let sAnswear = await connection.text()
     let jAnswear = JSON.parse(sAnswear) // PHP json_decode
-    console.log(jAnswear);
+
     generateBadge(jAnswear);
 };
 
 function generateBadge(jAnswear) {
+    // if (typeof jAnswear['answear1'] !== 'undefined') {
+    //     console.log('nope');
+    // }
+    //const dude = PIXI.Texture.from('../assets/images/' + i + '.png');
+    //if statement for changing 
+    //answears into adjectives
+    let name = jAnswear['userNameFk'];
 
     let answear1 = jAnswear['answear1'];
     let answear2 = jAnswear['answear2'];
     let answear3 = jAnswear['answear3'];
-    //if statement for changing 
-    //answears into adjectives
+
+
+    if (answear1 == 'Apathetic') {
+        answear1 = "Adjective1";
+    }
+    if (answear2 == 'Radical') {
+        answear2 = "Adjective2";
+    }
+    if (answear3 == 'Meteor') {
+        answear3 = "Adjective3";
+    }
 
 
     const svg = `
@@ -48,7 +64,7 @@ function generateBadge(jAnswear) {
             <text id="_1.some_adjective" data-name="1.some adjective" transform="translate(7166 13733)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear1}</tspan></text>
             <text id="_2.some_adjective" data-name="2.some adjective" transform="translate(7166 13783)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear2}</tspan></text>
             <text id="_3.some_adjective" data-name="3.some adjective" transform="translate(7166 13833)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear3}</tspan></text>
-            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-BoldItalic, Monarcha" font-weight="700" font-style="italic"><tspan y="0">${jAnswear['userNameFk']} is a</tspan></text>
+            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-BoldItalic, Monarcha" font-weight="700" font-style="italic"><tspan y="0">${name} is a</tspan></text>
         </g>
     </svg>
 `
