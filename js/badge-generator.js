@@ -44,12 +44,26 @@ function generateBadge(jAnswear) {
     if (answear1 == 'Numb') {
         answear1 = "Numb";
     }
+    //2
+    if (answear2 == 'Democratic') {
+        answear2 = "Vague";
+    }
+    if (answear2 == 'Authoritarian') {
+        answear2 = "Despotic";
+    }
+    if (answear2 == 'Radical') {
+        answear2 = "Nihilist";
+    }
+    if (answear2 == 'Conservative') {
+        answear2 = "Fascist";
+    }
     //3
-    // if (answear3 == 'Aliens') {
-    //     answear3 = "Aliens";
-    // }
-
-    answear3 = "Moron";
+    if (answear3 == 'Flood' || answear3 == 'Ecological collapse' || answear3 == 'Asteroid impact' || answear3 == 'Climate change') {
+        answear2 = "Catastrophic";
+    }
+    if (answear3 == 'Aliens' || answear3 == 'AI' || answear3 == 'Pandemics' || answear3 == 'Nuclear war') {
+        answear3 = "Lunatic";
+    }
 
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="315" height="315" viewBox="0 0 315 315">
@@ -72,7 +86,7 @@ function generateBadge(jAnswear) {
             <text id="_1.some_adjective" data-name="1.some adjective" transform="translate(7166 13733)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear1}</tspan></text>
             <text id="_2.some_adjective" data-name="2.some adjective" transform="translate(7166 13783)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear2}</tspan></text>
             <text id="_3.some_adjective" data-name="3.some adjective" transform="translate(7166 13833)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear3}</tspan></text>
-            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-BoldItalic, Monarcha" font-weight="700" font-style="italic"><tspan y="0">${name} is a</tspan></text>
+            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${name} is a</tspan></text>
         </g>
     </svg>
 `

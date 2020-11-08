@@ -1,6 +1,11 @@
 <?php
 
 session_start();
+
+// if( isset($_SESSION["id"])){
+//     sendError(400, 'misisng id', __LINE__);
+// }
+
 require_once( __DIR__.'/../private/mariadb.php' );
 try {
 

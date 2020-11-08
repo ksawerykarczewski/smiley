@@ -1,9 +1,13 @@
 <?php
 
 session_start();
+
+// if( isset($_SESSION["id"])){
+//     sendError(400, 'misisng id', __LINE__);
+// }
+
 require_once( __DIR__.'/../private/mariadb.php' );
 try {
-
     $answear1 = isset($_POST['answear1']) ? $_POST['answear1'] : 0;
     $answear2 = isset($_POST['answear2']) ? $_POST['answear2'] : 0;
     $answear3 = isset($_POST['answear3']) ? $_POST['answear3'] : 0;

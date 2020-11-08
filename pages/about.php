@@ -38,9 +38,21 @@ session_destroy();
 
     <section class="buttton-container--about">
         <a class="button button--regular" href="badge.html">⬅︎ Go back</a>
-        <a class="button button--regular" href="badge.html">Share this website</a>
+        <a class="button button--regular button--share" data-clipboard-text="website link.href">Share this website</a>
     </section>
     <script src="../js/pixi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script>
+    var clipboard = new ClipboardJS('.button--share');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
 </body>
 
 </html>

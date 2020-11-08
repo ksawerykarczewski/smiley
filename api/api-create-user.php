@@ -1,14 +1,14 @@
 <?php
 //Validation
-if( ! isset($_POST['name']) ){
-    sendError(400, 'missing name', __LINE__);
-}
-if( strlen($_POST['name']) < 2 ){
-    sendError(400, 'name must be at least 2 characters', __LINE__);
-}
-if( strlen($_POST['name']) > 15 ){
-    sendError(400, 'name cannot be longer than 15 characters', __LINE__);
-}
+// if( ! isset($_POST['name']) ){
+//     sendError(400, 'missing name', __LINE__);
+// }
+// if( strlen($_POST['name']) < 2 ){
+//     sendError(400, 'name must be at least 2 characters', __LINE__);
+// }
+// if( strlen($_POST['name']) > 15 ){
+//     sendError(400, 'name cannot be longer than 15 characters', __LINE__);
+// }
 
 // require_once(__DIR__.'/mariadb.php');
 require_once( __DIR__.'/../private/mariadb.php' );
