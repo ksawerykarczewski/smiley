@@ -62,11 +62,19 @@
 
         position: relative;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
 
         gap: rem(20px);
     }
+}
+
+.button--share__copy {
+    position: absolute;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 @include mq-regular {
@@ -82,7 +90,7 @@
         &--about {
             position: absolute;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
             padding: 0;
             bottom: 0;
@@ -93,5 +101,9 @@
         
             gap: rem(20px);
         }
+    }
+
+    .button--share__copy {
+        bottom: 5rem;
     }
 }

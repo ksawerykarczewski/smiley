@@ -48,32 +48,11 @@ function closeModal() {
 // The user has clicked on the submit button
 async function submitAnswear1() {
     let answear = event.target.value;
-    // connect and get the tweet id
-    var form = new FormData();
-    form.append("answear1", answear);
-    var connection = await fetch('../api/api-answear-1.php', {
-        "method": "POST",
-        "body": form
-    })
-    // var jResponse = await connection.json()
-    // console.log(jResponse)
-    console.log(connection);
 }
 
 // The user has clicked on the submit button
 async function submitAnswear2() {
     let answear = event.target.value;
-    console.log(answear);
-    // connect and get the tweet id
-    var form = new FormData();
-    form.append("answear2", answear);
-    var connection = await fetch('../api/api-answear-2.php', {
-        "method": "POST",
-        "body": form
-    })
-    //var jResponse = await connection.json()
-    //console.log(jResponse)
-    console.log(connection);
 }
 
 

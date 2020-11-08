@@ -32,50 +32,41 @@ function speenWheel() {
     }
 
     if (myRotation == 1080 || myRotation == 720 || myRotation == 360) {
-        console.log("Pandemics");
+        //console.log("Pandemics");
         answear = 'Pandemics';
     }
     if (myRotation == 540 || myRotation == 900) {
-        console.log("Flood");
+        //console.log("Flood");
         answear = 'Flood';
     }
     if (myRotation == 495 || myRotation == 855) {
-        console.log("Aliens")
+        //console.log("Aliens")
         answear = 'Aliens';
     }
     if (myRotation == 450 || myRotation == 810) {
-        console.log("Climate Change")
+        //console.log("Climate Change")
         answear = 'Climate Change';
     }
     if (myRotation == 675 || myRotation == 1035) {
-        console.log("Ecological Collapse")
+        //console.log("Ecological Collapse")
         answear = 'Ecological Collapse';
     }
     if (myRotation == 945 || myRotation == 585) {
-        console.log("Asteroid Impact")
+        //console.log("Asteroid Impact")
         answear = 'Asteroid Impact';
     }
     if (myRotation == 765 || myRotation == 405) {
-        console.log("Nuclear War")
+        //console.log("Nuclear War")
         answear = 'Nuclear War';
     }
     if (myRotation == 990 || myRotation == 630) {
-        console.log("AI")
+        //console.log("AI")
         answear = 'AI';
     }
-    submitAnswear3(answear);
+    //submitAnswear3(answear);
 }
 
 // The user has clicked on the submit button
-async function submitAnswear3(answear) {
-    var form = new FormData();
-    form.append("answear3", answear);
-    var connection = await fetch('../api/api-answear-3.php', {
-        "method": "POST",
-        "body": form
-    })
-    console.log(connection);
-}
 
 function displayModal() {
 

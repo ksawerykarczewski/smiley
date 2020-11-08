@@ -1,69 +1,20 @@
 window.onload = function () {
-    // generateBadge();
-    getAnswear();
+    generateBadge();
 };
 
+function generateBadge() {
+    // let name = jAnswear['userNameFk'];
 
-async function getAnswear() {
-    let connection = await fetch('../api/api-read.php')
-    //console.log(connection);
-    if (connection.status != 200) {
-        alert('Something is wrong in the system')
-    }
-    console.log(connection);
+    // let answear1 = jAnswear['answear1'];
+    // let answear2 = jAnswear['answear2'];
+    // let answear3 = jAnswear['answear3'];
 
-    let sAnswear = await connection.text()
-    let jAnswear = JSON.parse(sAnswear) // PHP json_decode
 
-    generateBadge(jAnswear);
-};
+    let name = "You are a";
 
-function generateBadge(jAnswear) {
-    // if (typeof jAnswear['answear1'] !== 'undefined') {
-    //     console.log('nope');
-    // }
-    //const dude = PIXI.Texture.from('../assets/images/' + i + '.png');
-    //if statement for changing 
-    //answears into adjectives
-    let name = jAnswear['userNameFk'];
-
-    let answear1 = jAnswear['answear1'];
-    let answear2 = jAnswear['answear2'];
-    let answear3 = jAnswear['answear3'];
-
-    //1
-    if (answear1 == 'Happy') {
-        answear1 = "Naive";
-    }
-    if (answear1 == 'Apathetic') {
-        answear1 = "Dull";
-    }
-    if (answear1 == 'Sad') {
-        answear1 = "Bitter";
-    }
-    if (answear1 == 'Numb') {
-        answear1 = "Numb";
-    }
-    //2
-    if (answear2 == 'Democratic') {
-        answear2 = "Vague";
-    }
-    if (answear2 == 'Authoritarian') {
-        answear2 = "Despotic";
-    }
-    if (answear2 == 'Radical') {
-        answear2 = "Nihilist";
-    }
-    if (answear2 == 'Conservative') {
-        answear2 = "Fascist";
-    }
-    //3
-    if (answear3 == 'Flood' || answear3 == 'Ecological collapse' || answear3 == 'Asteroid impact' || answear3 == 'Climate change') {
-        answear2 = "Catastrophic";
-    }
-    if (answear3 == 'Aliens' || answear3 == 'AI' || answear3 == 'Pandemics' || answear3 == 'Nuclear war') {
-        answear3 = "Lunatic";
-    }
+    let answear1 = "Naive";
+    let answear2 = "Unthinking";
+    let answear3 = "Conformists";
 
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="315" height="315" viewBox="0 0 315 315">
@@ -86,7 +37,7 @@ function generateBadge(jAnswear) {
             <text id="_1.some_adjective" data-name="1.some adjective" transform="translate(7166 13733)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear1}</tspan></text>
             <text id="_2.some_adjective" data-name="2.some adjective" transform="translate(7166 13783)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear2}</tspan></text>
             <text id="_3.some_adjective" data-name="3.some adjective" transform="translate(7166 13833)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${answear3}</tspan></text>
-            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${name} is a</tspan></text>
+            <text id="Tom_is_a" data-name="Tom is a" transform="translate(7158 13683)" font-size="31" font-family="Monarcha-Bold, Monarcha" font-weight="700"><tspan y="0">${name}</tspan></text>
         </g>
     </svg>
 `
@@ -131,9 +82,9 @@ function generateBadge(jAnswear) {
     }
 }
 
-document.querySelector("#badge-download").addEventListener("click", destroySession);
+// document.querySelector("#badge-download").addEventListener("click", destroySession);
 
-function destroySession() {
-    console.log('download');
-}
+// function destroySession() {
+//     console.log('download');
+// }
 
